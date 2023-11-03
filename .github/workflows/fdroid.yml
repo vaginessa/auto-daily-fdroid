@@ -23,7 +23,7 @@ jobs:
       - name: Restore correct mtime
         run: |
           echo sudo apt install git-restore-mtime 
-          git restore-mtime
+          git-restore-mtime
 
       - name: Install F-Droid server software
         if: "!contains(github.event.commits[0].message, 'dont use the apt repo...')"
