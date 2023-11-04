@@ -67,6 +67,15 @@ jobs:
         env:
           GH_ACCESS_TOKEN: ${{ github.token }}
 
+      - name: Compress Images
+        id: calibre
+        uses: uwx/actions/calibre-image-actions@main
+        with:
+          githubToken: ${{ github.token }}
+          compressOnly: true
+          commitName: github-actions
+          commitEmail: 41898282+github-actions[bot]@users.noreply.github.com
+
       - name: Deploy
         if: steps.run-update-script.outputs.exitcode == '0'
         uses: uwx/actions/git-publish-subdir@main
