@@ -71,7 +71,8 @@ jobs:
         env:
           REPO: self
           BRANCH: fdroid-repo
-          FOLDER: fdroid
+          FOLDER: fdroid/repo
+          TARGET_DIR: repo
           GITHUB_TOKEN: ${{ github.token }}
           SQUASH_HISTORY: true
           COMMIT_NAME: github-actions
