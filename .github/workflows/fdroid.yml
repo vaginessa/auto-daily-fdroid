@@ -43,6 +43,7 @@ jobs:
           go-version: '^1.17.0'
 
       - name: Run update script
+        id: run-update-script
         run: bash update.sh 2>&1
         env:
           GH_ACCESS_TOKEN: ${{ github.token }}
@@ -50,5 +51,14 @@ jobs:
           keypass: ${{ secrets.keypass }}
           repo_keyalias: ${{ secrets.repo_keyalias }}
           keydname: ${{ secrets.keydname }}
-          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/main/fdroid/repo
+          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/fdroid-repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
+
+      - name: Deploy
+        if: steps.run-update-script.outputs.exitcode == '0'
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: fdroid-repo
+          FOLDER: fdroid/repo
+          GITHUB_TOKEN: ${{ github.token }}

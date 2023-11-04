@@ -5,9 +5,10 @@ out.txt
 /.vscode
 #keystore.p12
 #config.yml
-fdroid/tmp
-fdroid/repo/status
-fdroid/metadata/**/phoneScreenshots
+/fdroid/repo
+/fdroid/tmp
+/fdroid/repo/status
+/fdroid/metadata/**/phoneScreenshots
 
 metascoop/metascoop
 
