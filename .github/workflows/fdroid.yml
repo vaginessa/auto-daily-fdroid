@@ -50,7 +50,7 @@ jobs:
       - run: |
           cd jshelpers
           npm install
-          npx tsx deyaml.js
+          npx tsx deyaml.ts
         env:
           keystorepass: ${{ secrets.keystorepass }}
           keypass: ${{ secrets.keypass }}
