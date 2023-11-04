@@ -73,7 +73,7 @@ FastHub:
 
   # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
   # you can use any name here, but you should look at the existing categories first
-  categories: 
+  categories:
     - Internet
     - Development
 
@@ -169,7 +169,7 @@ FastHub-RE:
 
   # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
   # you can use any name here, but you should look at the existing categories first
-  categories: 
+  categories:
     - Internet
     - Development
 
@@ -197,7 +197,7 @@ Hacki:
     * Synced favorites and pins across devices. (iOS only)
     * Launch from system share sheet.
     * And more...
-  categories: 
+  categories:
     - Internet
 
 Tachiyomi-Sorayami:
@@ -314,12 +314,12 @@ GetX-Stream:
   categories:
     - Multimedia
 
-Buwa:
-  git: https://github.com/iamtheblackunicorn/Buwa
-  name: Black Unicorn Wallpapers
-  summary: Sexy and beautiful wallpapers for your Android-powered device!
-  categories:
-    - Multimedia
+#Buwa:
+#  git: https://github.com/iamtheblackunicorn/Buwa
+#  name: Black Unicorn Wallpapers
+#  summary: Sexy and beautiful wallpapers for your Android-powered device!
+#  categories:
+#    - Multimedia
 
 pScrobbler:
   git: https://github.com/kawaiiDango/pScrobbler
@@ -525,7 +525,7 @@ TachiyomiAZ:
     - Animanga
   description: >-
     This fork is based off of TachiyomiEH. It has most features and fixes from Tachiyomi, as well as features from TachiyomiJ2K. It has decided to keep the hamburger menu style of navigation, compared to the other forks that are moving to the new bottom navigation style. Anime support is coming "soon™"
-    
+
     Special Sources (integrated plus added features)::
 
         * E-Hentai/ExHentai
@@ -622,7 +622,7 @@ Neko:
     This is a MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains features specific to Mangadex that those versions cannot offer. It also features almost every feature that J2K has except for other sources,local sources, and editting manga.
 
     Note:: This fork is for Android 7+
-    
+
     Specific features::
 
         * Supports native login to MangaDex and 2FA
@@ -646,7 +646,7 @@ Animiru:
   description: >-
     Animiru is an unofficial fork of Aniyomi, which is yet another unofficial fork of the free and open source manga reader Tachiyomi
     Animiru strips the manga capabilities of Aniyomi, to make it an anime only app for Android 6.0+
-    
+
     Feature include everything you know and love about Tachiyomi but for anime::
       * Watching anime from a variety of sources
       * Local watching of downloaded content
@@ -732,7 +732,7 @@ rockit:
     Additionality, it might connect to other hosts (e.g. YouTube) to receive video and article thumbnails.
     Since none of these services are free software, it's labeled with "NonFreeNet".
 
-  categories: 
+  categories:
     - Internet
     - Science & Education
 
