@@ -23,7 +23,7 @@ jobs:
           ref: fdroid-repo
           path: fdroid-2
 
-      - run: mv fdroid-2/repo fdroid/repo
+      - run: mv fdroid-2/repo fdroid/repo || 1
 
       - name: Create basic directory structure
         run: mkdir -p fdroid/repo
