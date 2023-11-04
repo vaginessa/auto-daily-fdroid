@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: fdroid-repo
-          path: fdroid/repo
+          path: fdroid
 
       - name: Create basic directory structure
         run: mkdir -p fdroid/repo
@@ -48,10 +48,6 @@ jobs:
           go-version: '^1.17.0'
 
       - run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-      - run: |
           cd jshelpers
           npm install
           npx tsx deyaml.js
@@ -60,7 +56,7 @@ jobs:
           keypass: ${{ secrets.keypass }}
           repo_keyalias: ${{ secrets.repo_keyalias }}
           keydname: ${{ secrets.keydname }}
-          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/fdroid-repo
+          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/fdroid-repo/repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
 
       - name: Run update script
@@ -75,5 +71,8 @@ jobs:
         env:
           REPO: self
           BRANCH: fdroid-repo
-          FOLDER: fdroid/repo
+          FOLDER: fdroid
           GITHUB_TOKEN: ${{ github.token }}
+          SQUASH_HISTORY: true
+          COMMIT_NAME: github-actions
+          COMMIT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
