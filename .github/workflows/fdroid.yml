@@ -21,7 +21,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: fdroid-repo
-          path: fdroid
+          path: fdroid-2
+
+      - run: mv fdroid-2/repo fdroid/repo
 
       - name: Create basic directory structure
         run: mkdir -p fdroid/repo
