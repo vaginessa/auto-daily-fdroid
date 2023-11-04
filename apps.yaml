@@ -375,6 +375,7 @@ ShosetsuPreview:
 
 TachiyomiSY:
   git: https://github.com/jobobby04/TachiyomiSY
+  name: TachiyomiSY
   summary: Fork of Tachiyomi via TachiyomiAZ.
   categories:
     - Internet
@@ -445,6 +446,7 @@ TachiyomiSY:
 
 TachiyomiSY-Preview:
   git: https://github.com/jobobby04/TachiyomiSYPreview
+  name: TachiyomiSY (Preview)
   summary: TachiyomiSY Preview builds.
   categories:
     - Internet
@@ -515,6 +517,7 @@ TachiyomiSY-Preview:
 
 TachiyomiAZ:
   git: https://github.com/az4521/TachiyomiAZ
+  name: TachiyomiAZ
   summary: This fork is based off of TachiyomiEH. It has most features and fixes from Tachiyomi, as well as features from TachiyomiJ2K. It has decided to keep the hamburger menu style of navigation, compared to the other forks that are moving to the new bottom navigation style. Anime support is coming "soon™"
   categories:
     - Internet
@@ -568,6 +571,7 @@ TachiyomiAZ:
 
 TachiyomiJ2K:
   git: https://github.com/Jays2Kings/tachiyomiJ2K
+  name: TachiyomiJ2K
   summary: TachiyomiJ2K is a free and open source manga reader for Android 6.0 and above. Based on the original Tachiyomi
   categories:
     - Internet
@@ -608,6 +612,7 @@ TachiyomiJ2K:
 
 Neko:
   git: https://github.com/CarlosEsco/Neko
+  name: Neko
   summary: A Free, Open source unofficial manga reader for MangaDex
   categories:
     - Internet
@@ -632,6 +637,7 @@ Neko:
 
 Animiru:
   git: https://github.com/Quickdesh/Animiru
+  name: Animiru
   summary: Animiru strips the manga capabilities of Aniyomi, to make it an anime only app for Android 6.0+
   categories:
     - Internet
@@ -653,6 +659,7 @@ Animiru:
 
 Takoyomi:
   git: https://github.com/CrepeTF/Takoyomi
+  name: Takoyomi
   summary: Takoyomi is a fork of TachiyomiSY which aims to implement UI changes which TachiyomiSY did or have not.
   categories:
     - Internet
@@ -685,3 +692,49 @@ Aniyomi:
         * Light and dark themes
         * Schedule updating your library for new chapters
         * Create backups locally to read offline or to your desired cloud service
+
+notality:
+  git: https://github.com/xarantolus/notality
+  name: "Notality"
+  description: |
+    Notality is a very simple note taking app. I mostly built it to learn how Flutter works, but it's functional and you can use it.
+
+    <b>Features</b>
+
+    - Create, edit, delete and reorder notes
+    - Automatic dark/light mode depending on the system-wide setting
+    - Import/Export your notes to save them externally
+    - Localization for English and German
+
+  # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
+  # you can use any name here, but you should look at the existing categories first
+  categories:
+    - Writing
+
+
+rockit:
+  git: https://github.com/xarantolus/rockit
+  name: "Rock It!"
+  description: |
+    Rock It! helps you stay informed on all things space.
+    It displays upcoming rocket launches and current space news curated by <a href="https://thespacedevs.com/">The Space Devs</a>.
+
+    <b>Features</b>
+
+    - List upcoming launches and events (e.g. space station activity)
+    - Show launch/event details and a countdown (including the date and time in your local timezone)
+    - List latest space news articles
+    - Subscribe to launches or events to receive notifications before the start or when times are updated
+    - Search future events and launches
+    - No internet? No problem! The app caches offline content for a few days and updates it when connected to the internet
+
+    The app connects to the Launch Library and Spaceflight News API to get information about launches.
+    Additionality, it might connect to other hosts (e.g. YouTube) to receive video and article thumbnails.
+    Since none of these services are free software, it's labeled with "NonFreeNet".
+
+  categories: 
+    - Internet
+    - Science & Education
+
+  anti_features:
+    - NonFreeNet

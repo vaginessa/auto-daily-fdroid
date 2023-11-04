@@ -53,17 +53,32 @@ func GenerateReleaseFilename(appName string, tagName string) string {
 }
 
 func ListAllReleases(githubClient *github.Client, appRepoAuthor, appRepoName string) (allReleases []*github.RepositoryRelease, err error) {
+	//rels, _, ierr := githubClient.Repositories.ListReleases(context.Background(), appRepoAuthor, appRepoName, &github.ListOptions{
+	//	Page:    1,
+	//	PerPage: 2,
+	//})
+	//if ierr != nil || len(rels) == 0 {
+	//	err = ierr
+	//	return
+	//}
+	//
+	//allReleases = append(allReleases, rels...)
 
-	rels, _, ierr := githubClient.Repositories.ListReleases(context.Background(), appRepoAuthor, appRepoName, &github.ListOptions{
-		Page:    1,
-		PerPage: 2,
-	})
-	if ierr != nil || len(rels) == 0 {
-		err = ierr
-		return
+	var currentPage int = 1
+
+	for {
+		rels, _, ierr := githubClient.Repositories.ListReleases(context.Background(), appRepoAuthor, appRepoName, &github.ListOptions{
+			Page:    currentPage,
+			PerPage: 100,
+		})
+		if ierr != nil || len(rels) == 0 {
+			err = ierr
+			break
+		}
+
+		allReleases = append(allReleases, rels...)
+		currentPage++
 	}
-
-	allReleases = append(allReleases, rels...)
 
 	return
 }

@@ -30,6 +30,8 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for the following 
 | <a href="https://github.com/Jays2Kings/tachiyomiJ2K"><img src="fdroid/repo/icons/" alt="TachiyomiJ2K icon" width="36px" height="36px"></a> | [**TachiyomiJ2K**](https://github.com/Jays2Kings/tachiyomiJ2K) | Free and open source manga reader for Android | 1.5.6 (94) |
 | <a href="https://github.com/jobobby04/TachiyomiSY"><img src="fdroid/repo/icons/" alt="TachiyomiSY icon" width="36px" height="36px"></a> | [**TachiyomiSY**](https://github.com/jobobby04/TachiyomiSY) | Free and open source manga reader for Android | 1.8.5 (36) |
 | <a href="https://github.com/CrepeTF/Takoyomi"><img src="fdroid/repo/icons/" alt="Takoyomi icon" width="36px" height="36px"></a> | [**Takoyomi**](https://github.com/CrepeTF/Takoyomi) | Free and open source manga reader for Android | 3.2.7 (52) |
+| <a href="https://github.com/xarantolus/notality"><img src="fdroid/repo/icons/io.github.xarantolus.notality.10.png" alt="Notality icon" width="36px" height="36px"></a> | [**Notality**](https://github.com/xarantolus/notality) | A very simple note taking app for Android | 1.8.1 (10) |
+| <a href="https://github.com/xarantolus/rockit"><img src="fdroid/repo/icons/" alt="Rock It! icon" width="36px" height="36px"></a> | [**Rock It!**](https://github.com/xarantolus/rockit) | Rock It! is an Android app that helps you stay informed on all things space | 1.5.0 (22) |
 <!-- end apps table -->
 
 ### How to use
@@ -49,10 +51,6 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for the following 
 3. Open the link in F-Droid. It will ask you to add the repository. Everything should already be filled in correctly, so just press "OK".
 4. You can now install my apps, e.g. start by searching for "Notality" in the F-Droid client.
 
-### Apps
-
-<!-- This table is auto-generated. Do not edit -->
-<!-- end apps table -->
 Please note that some apps published here might contain [Anti-Features](https://f-droid.org/en/docs/Anti-Features/). If you can't find an app by searching for it, you can go to settings and enable "Include anti-feature apps".
 
 ### For developers
