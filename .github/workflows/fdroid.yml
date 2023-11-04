@@ -69,7 +69,7 @@ jobs:
 
       - name: Deploy
         if: steps.run-update-script.outputs.exitcode == '0'
-        uses: s0/git-publish-subdir-action@develop
+        uses: uwx/actions/git-publish-subdir@main
         env:
           REPO: self
           BRANCH: fdroid-repo
