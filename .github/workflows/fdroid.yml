@@ -29,7 +29,7 @@ jobs:
       - name: Restore correct mtime
         run: |
           sudo apt install git-restore-mtime
-          git restore-mtime
+          git restore-mtime --force
 
       - name: Install F-Droid server software
         run: |
