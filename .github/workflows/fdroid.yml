@@ -79,3 +79,4 @@ jobs:
           SQUASH_HISTORY: true
           COMMIT_NAME: github-actions
           COMMIT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          TEMP_DIR: ${{ runner.temp }}
