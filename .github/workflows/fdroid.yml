@@ -47,6 +47,10 @@ jobs:
         with:
           go-version: '^1.17.0'
 
+      - run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
       - name: Run update script
         id: run-update-script
         run: bash update.sh 2>&1
