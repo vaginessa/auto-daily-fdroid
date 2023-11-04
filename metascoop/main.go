@@ -54,10 +54,12 @@ func main() {
 
 	fdroidIndexFilePath := filepath.Join(*repoDir, "index-v1.json")
 
-	initialFdroidIndex, initialFdroidErr := apps.ReadIndex(fdroidIndexFilePath)
-	// if err != nil {
-	// 	log.Fatalf("reading f-droid repo index: %s\n", err.Error())
-	// }
+	initialFdroidIndex, err := apps.ReadIndex(fdroidIndexFilePath)
+	var haveOldIndex bool = true
+	if err != nil {
+		// log.Fatalf("reading f-droid repo index: %s\n", err.Error())
+		haveOldIndex := false
+	}
 
 	err = os.MkdirAll(*repoDir, 0o644)
 	if err != nil {
@@ -405,7 +407,7 @@ func main() {
 		log.Fatalf("error generating %q: %s\n", readmePath, err.Error())
 	}
 
-	cpath, haveSignificantChanges := initialFdroidErr != nil || apps.HasSignificantChanges(initialFdroidIndex, fdroidIndex)
+	cpath, haveSignificantChanges := !haveOldIndex || apps.HasSignificantChanges(initialFdroidIndex, fdroidIndex)
 	if haveSignificantChanges {
 		log.Printf("The index %q had a significant change at JSON path %q", fdroidIndexFilePath, cpath)
 	} else {
