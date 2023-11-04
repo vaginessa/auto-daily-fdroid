@@ -51,17 +51,23 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-      - name: Run update script
-        id: run-update-script
-        run: bash update.sh 2>&1
+      - run: |
+          cd jshelpers
+          npm install
+          npx tsx deyaml.js
         env:
-          GH_ACCESS_TOKEN: ${{ github.token }}
           keystorepass: ${{ secrets.keystorepass }}
           keypass: ${{ secrets.keypass }}
           repo_keyalias: ${{ secrets.repo_keyalias }}
           keydname: ${{ secrets.keydname }}
           repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/fdroid-repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
+
+      - name: Run update script
+        id: run-update-script
+        run: bash update.sh 2>&1
+        env:
+          GH_ACCESS_TOKEN: ${{ github.token }}
 
       - name: Deploy
         if: steps.run-update-script.outputs.exitcode == '0'
