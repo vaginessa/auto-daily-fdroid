@@ -407,30 +407,52 @@ func main() {
 		log.Fatalf("error generating %q: %s\n", readmePath, err.Error())
 	}
 
-	cpath, haveSignificantChanges := !haveOldIndex || apps.HasSignificantChanges(initialFdroidIndex, fdroidIndex)
-	if haveSignificantChanges {
-		log.Printf("The index %q had a significant change at JSON path %q", fdroidIndexFilePath, cpath)
-	} else {
-		log.Printf("The index files didn't change significantly")
+	//if haveOldIndex {
+	//		cpath, haveSignificantChanges := apps.HasSignificantChanges(initialFdroidIndex, fdroidIndex)
+	//		if haveSignificantChanges {
+	//log.Printf("The index %q had a significant change at JSON path %q", fdroidIndexFilePath, cpath)
+	//		} else {
+	//log.Printf("The index files didn't change significantly")
 
-		changedFiles, err := git.GetChangedFileNames(*repoDir)
-		if err != nil {
-			log.Fatalf("getting changed files: %s\n::endgroup::\n", err.Error())
-		}
+	//changedFiles, err := git.GetChangedFileNames(*repoDir)
+	//if err != nil {
+	//log.Fatalf("getting changed files: %s\n::endgroup::\n", err.Error())
+	//}
 
-		// If only the index files changed, we ignore the commit
-		for _, fname := range changedFiles {
-			if !strings.Contains(fname, "index") {
-				haveSignificantChanges = true
+	//// If only the index files changed, we ignore the commit
+	//for _, fname := range changedFiles {
+	//if !strings.Contains(fname, "index") {
+	//haveSignificantChanges = true
 
-				log.Printf("File %q is a significant change", fname)
-			}
-		}
+	//log.Printf("File %q is a significant change", fname)
+	//}
+	//}
 
-		if !haveSignificantChanges {
-			log.Printf("It doesn't look like there were any relevant changes, neither to the index file nor any file indexed by git.")
-		}
-	}
+	//if !haveSignificantChanges {
+	//log.Printf("It doesn't look like there were any relevant changes, neither to the index file nor any file indexed by git.")
+	//}
+	//		}
+	//} else {
+	//		log.Printf("The index files didn't change significantly")
+
+	//		changedFiles, err := git.GetChangedFileNames(*repoDir)
+	//		if err != nil {
+	//log.Fatalf("getting changed files: %s\n::endgroup::\n", err.Error())
+	//		}
+
+	//		// If only the index files changed, we ignore the commit
+	//		for _, fname := range changedFiles {
+	//if !strings.Contains(fname, "index") {
+	//haveSignificantChanges = true
+
+	//log.Printf("File %q is a significant change", fname)
+	//}
+	//		}
+
+	//		if !haveSignificantChanges {
+	//log.Printf("It doesn't look like there were any relevant changes, neither to the index file nor any file indexed by git.")
+	//		}
+	//}
 
 	fmt.Println("::endgroup::")
 
@@ -439,10 +461,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	// If we don't have any good changes, we report it with exit code 2
-	if !haveSignificantChanges {
-		os.Exit(2)
-	}
+	//// If we don't have any good changes, we report it with exit code 2
+	//if !haveSignificantChanges {
+	//	os.Exit(2)
+	//}
 
 	// If we have relevant changes, we exit with code 0
 }
