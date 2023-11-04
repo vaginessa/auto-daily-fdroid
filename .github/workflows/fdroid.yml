@@ -21,9 +21,7 @@ jobs:
         run: mkdir -p fdroid/repo
 
       - name: Restore correct mtime
-        run: |
-          apt install git-restore-mtime
-          git restore-mtime
+        uses: chetan/git-restore-mtime-action@v2
 
       - name: Install F-Droid server software
         if: "!contains(github.event.commits[0].message, 'dont use the apt repo...')"
