@@ -20,8 +20,8 @@ jobs:
       - name: Create basic directory structure
         run: mkdir -p fdroid/repo
 
-      - name: Restore correct mtime
-        uses: chetan/git-restore-mtime-action@v2
+      #- name: Restore correct mtime
+      #  uses: chetan/git-restore-mtime-action@v2
 
       - name: Install F-Droid server software
         if: "!contains(github.event.commits[0].message, 'dont use the apt repo...')"
