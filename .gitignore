@@ -19,3 +19,4 @@ io.github.xarantolus.*
 #apps.yaml # only used for git-filter-repo, to reduce noise in history
 
 node_modules
+/setvars.cmd
