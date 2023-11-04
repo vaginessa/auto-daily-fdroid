@@ -1,0 +1,72 @@
+# see https://gitlab.com/fdroid/fdroidserver/blob/2.2.1/examples/config.yml
+
+# Custom path to the Android SDK, defaults to $ANDROID_HOME
+#sdk_path: C:\AndroidSdk\build-tools\34.0.0
+
+# The key (from the keystore defined below) to be used for signing the
+# repository itself. This is the same name you would give to keytool or
+# jarsigner using -alias. (Not needed in an unsigned repository).
+# repo_keyalias: fdroidrepo
+
+# Optionally, the public key for the key defined by repo_keyalias above can
+# be specified here. There is no need to do this, as the public key can and
+# will be retrieved from the keystore when needed. However, specifying it
+# manually can allow some processing to take place without access to the
+# keystore.
+# repo_pubkey: ...
+
+# The keystore to use for release keys when building. This needs to be
+# somewhere safe and secure, and backed up!  The best way to manage these
+# sensitive keys is to use a "smartcard" (aka Hardware Security Module). To
+# configure F-Droid to use a smartcard, set the keystore file using the keyword
+# "NONE" (i.e. keystore: "NONE"). That makes Java find the keystore on the
+# smartcard based on 'smartcardoptions' below.
+keystore: keystore.p12
+
+# You should not need to change these at all, unless you have a very
+# customized setup for using smartcards in Java with keytool/jarsigner
+# smartcardoptions: |
+#   -storetype PKCS11 -providerName SunPKCS11-OpenSC
+#   -providerClass sun.security.pkcs11.SunPKCS11
+#   -providerArg opensc-fdroid.cfg
+
+# The password for the keystore (at least 6 characters). If this password is
+# different than the keypass below, it can be OK to store the password in this
+# file for real use. But in general, sensitive passwords should not be stored
+# in text files!
+keystorepass: {env: keystorepass}
+
+# The password for keys - the same is used for each auto-generated key as well
+# as for the repository key. You should not normally store this password in a
+# file since it is a sensitive password.
+keypass: {env: keypass}
+
+# The key (from the keystore defined below) to be used for signing the
+# repository itself. This is the same name you would give to keytool or
+# jarsigner using -alias. (Not needed in an unsigned repository).
+repo_keyalias: {env: repo_keyalias}
+
+# The distinguished name used for all keys.
+keydname: {env: keydname}
+
+# Canonical URL of the repositoy, needs to end in /repo. Is is used to identity
+# the repo in the client, as well.
+repo_url: {env: repo_url}
+# repo_name: My First F-Droid Repo Demo
+# repo_description: >-
+#   This is a repository of apps to be used with F-Droid. Applications
+#   in this repository are either official binaries built by the
+#   original application developers, or are binaries built from source
+#   by the admin of f-droid.org using the tools on
+#   https://gitlab.com/fdroid.
+
+archive_older: 0
+
+# If you want to upload the release APK file to androidobservatory.org
+#
+androidobservatory: true
+
+# If you want to upload the release APK file to virustotal.com
+# You have to enter your profile apikey to enable the upload.
+#
+virustotal_apikey: {env: virustotal_apikey}
