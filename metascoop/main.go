@@ -54,13 +54,6 @@ func main() {
 
 	fdroidIndexFilePath := filepath.Join(*repoDir, "index-v1.json")
 
-	initialFdroidIndex, err := apps.ReadIndex(fdroidIndexFilePath)
-	var haveOldIndex bool = true
-	if err != nil {
-		// log.Fatalf("reading f-droid repo index: %s\n", err.Error())
-		haveOldIndex := false
-	}
-
 	err = os.MkdirAll(*repoDir, 0o644)
 	if err != nil {
 		log.Fatalf("creating repo directory: %s\n", err.Error())
