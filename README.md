@@ -1,4 +1,4 @@
-[![Last Update. Updates are automatic, and only occur if there are new releases](https://img.shields.io/github/last-commit/efreak/auto-daily-fdroid?label=last%20update&style=for-the-badge)](https://github.com/Efreak/auto-daily-fdroid/commits/main) [![Number of APKs in the repo (including old versions)](https://img.shields.io/github/directory-file-count/efreak/auto-daily-fdroid/fdroid/repo?extension=apk&label=APKs&style=for-the-badge&type=file)](https://github.com/Efreak/auto-daily-fdroid/tree/main/fdroid/repo) [![Repo size - I try to keep the repo under 500mb to ease local changes](https://img.shields.io/github/repo-size/efreak/auto-daily-fdroid?style=for-the-badge)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits)
+[![Last Update. Updates are automatic, and only occur if there are new releases](https://img.shields.io/github/last-commit/uwx/auto-daily-fdroid?label=last%20update&style=for-the-badge)](https://github.com/uwx/auto-daily-fdroid/commits/main) [![Number of APKs in the repo (including old versions)](https://img.shields.io/github/directory-file-count/uwx/auto-daily-fdroid/fdroid/repo?extension=apk&label=APKs&style=for-the-badge&type=file)](https://github.com/uwx/auto-daily-fdroid/tree/main/fdroid/repo) [![Repo size - I try to keep the repo under 500mb to ease local changes](https://img.shields.io/github/repo-size/uwx/auto-daily-fdroid?style=for-the-badge)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits)
 
 ## note
 This repo is a clone of [xarantolus/fdroid](https://github.com/xarantolus/fdroid), filtered (via git-filter-repo's clean-ignore filter) to remove all app-specific commits. A modification has been made to the metascoop go program to only fetch 5 releases from each repo. You can get a clean copy of this repo (without apks or metadata) at [efreak/fdroid-action](https://github.com/efreak/fdroid-action), however it's not guaranteed to be up to date with xaranolus' code. I will be semi-regularly filtering the history of this repo to keep it shorter. TODO: set up github action to automatically purge deleted files from history.
@@ -36,10 +36,10 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for the following 
 
 ### How to use
 1. At first, you should [install the F-Droid app](https://f-droid.org/), it's an alternative app store for Android.
-2. Now you can copy the following [link](https://raw.githubusercontent.com/efreak/auto-daily-fdroid/main/fdroid/repo), then add this repository to your F-Droid client:
+2. Now you can copy the following [link](https://raw.githubusercontent.com/uwx/auto-daily-fdroid/main/fdroid/repo), then add this repository to your F-Droid client:
 
     ```
-    https://raw.githubusercontent.com/efreak/auto-daily-fdroid/main/fdroid/repo
+    https://raw.githubusercontent.com/uwx/auto-daily-fdroid/main/fdroid/repo
     ```
 
     Alternatively, you can also scan this QR code:
