@@ -127,3 +127,26 @@ jobs:
           COMMIT_NAME: github-actions
           COMMIT_EMAIL: github-actions[bot]@users.noreply.github.com
           TEMP_DIR: C:\_temp # ${{ runner.temp }}
+
+      - name: Copy updated README to main repo
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Copy-Item -Path "$env:PROJECT_LOCATION\README.md" -Destination "${{ github.workspace }}\README.md" -Recurse -Force
+
+      - name: Write APK count to file for shields.io
+        shell: pwsh
+        run: |
+          (Get-ChildItem -Filter *.apk -Path "$env:PROJECT_LOCATION\fdroid\repo" -File -Recurse | Measure-Object).Count | Write-File "${{ github.workspace }}\.github\apk-count.json"
+
+      - name: Push updated readme and apk-count.json if needed
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config pull.rebase true
+
+          git add README.md .github\apk-count.json && \
+          git commit -m"Automated update README and APK count" && \
+          git pull && \
+          git push
+
+          exit 0
