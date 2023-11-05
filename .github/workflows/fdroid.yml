@@ -13,57 +13,93 @@ permissions:
 jobs:
   apps:
     name: "Generate repo from apps listing"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #windows-latest
+
+    env:
+      PROJECT_LOCATION: ${{ github.workspace }} # C:\fdroid
+      FDROID_REPO_BRANCH: fdroid-repo
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
+      - name: Checkout F-Droid repository branch
+        uses: actions/checkout@v4
         with:
-          ref: fdroid-repo
+          ref: ${{ env.FDROID_REPO_BRANCH }}
           path: fdroid-2
 
       - run: mv fdroid-2/repo fdroid/repo || true
 
-      - name: Create basic directory structure
+      - name: Create basic directory structure (Linux/macOS)
+        if: runner.os != 'Windows'
         run: mkdir -p fdroid/repo
 
-      - name: Restore correct mtime
-        run: |
-          sudo apt install git-restore-mtime
-          git restore-mtime --force
+      - name: Create basic directory structure (Windows)
+        if: runner.os == 'Windows'
+        run: mkdir fdroid\repo
 
-      - name: Install F-Droid server software
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Restore correct mtime
+        run: curl https://raw.githubusercontent.com/MestreLion/git-tools/main/git-restore-mtime | python -
+        #run: |
+        #  sudo apt install git-restore-mtime
+        #  git restore-mtime --force
+
+      - name: Install F-Droid server software (Windows)
+        if: runner.os == 'Windows'
+        run: pip install fdroidserver
+
+      - name: Install F-Droid server software (Linux/macOS)
+        if: runner.os != 'Windows'
         run: |
          sudo add-apt-repository ppa:fdroid/fdroidserver
          sudo apt-get update
          sudo apt-get install fdroidserver
-
-      #- name: Set up repo secrets
-      #  run: |
-      #    echo "${{ secrets.KEYSTORE_P12 }}" | base64 -d - > fdroid/keystore.p12
-      #    echo "${{ secrets.CONFIG_YML }}" | base64 -d - > fdroid/config.yml
 
       - uses: actions/setup-go@v2
         name: Set up Go
         with:
           go-version: '^1.17.0'
 
+      - name: Copy fdroid stuff to C drive
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Copy-Item -Path . -Destination $env:PROJECT_LOCATION -Recurse
+
       - run: |
-          cd jshelpers
-          npm install
-          npx tsx deyaml.ts
+          pnpm install
+          pnpx tsx deyaml.ts
+        working-directory: ${{ env.PROJECT_LOCATION }}/jshelpers
         env:
           keystorepass: ${{ secrets.keystorepass }}
           keypass: ${{ secrets.keypass }}
           repo_keyalias: ${{ secrets.repo_keyalias }}
           keydname: ${{ secrets.keydname }}
-          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/fdroid-repo/repo
+          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/${{ env.FDROID_REPO_BRANCH }}/repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
 
       - name: Run update script
         id: run-update-script
         run: bash update.sh 2>&1
+        working-directory: ${{ env.PROJECT_LOCATION }}
         env:
           GH_ACCESS_TOKEN: ${{ github.token }}
 
@@ -74,18 +110,19 @@ jobs:
           githubToken: ${{ github.token }}
           compressOnly: true
           commitName: github-actions
-          commitEmail: 41898282+github-actions[bot]@users.noreply.github.com
+          commitEmail: github-actions[bot]@users.noreply.github.com
+          location: ${{ env.PROJECT_LOCATION }}
 
       - name: Deploy
         if: steps.run-update-script.outputs.exitcode == '0'
         uses: uwx/actions/git-publish-subdir@main
         env:
           REPO: self
-          BRANCH: fdroid-repo
-          FOLDER: fdroid/repo
+          BRANCH: ${{ env.FDROID_REPO_BRANCH }}
+          FOLDER: ${{ env.PROJECT_LOCATION }}/fdroid/repo
           TARGET_DIR: repo
           GITHUB_TOKEN: ${{ github.token }}
           SQUASH_HISTORY: true
           COMMIT_NAME: github-actions
-          COMMIT_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          COMMIT_EMAIL: github-actions[bot]@users.noreply.github.com
           TEMP_DIR: ${{ runner.temp }}
