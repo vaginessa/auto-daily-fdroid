@@ -104,6 +104,7 @@ jobs:
           GH_ACCESS_TOKEN: ${{ github.token }}
 
       - name: Compress Images
+        if: runner.os != 'Windows' # TODO: container actions don't work on Windows
         id: calibre
         uses: uwx/actions/calibre-image-actions@main
         with:
