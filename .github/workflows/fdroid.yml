@@ -13,10 +13,10 @@ permissions:
 jobs:
   apps:
     name: "Generate repo from apps listing"
-    runs-on: ubuntu-latest #windows-latest
+    runs-on: windows-latest #ubuntu-latest
 
     env:
-      PROJECT_LOCATION: ${{ github.workspace }} # C:\fdroid
+      PROJECT_LOCATION: C:\fdroid # ${{ github.workspace }}
       FDROID_REPO_BRANCH: fdroid-repo
 
     steps:
