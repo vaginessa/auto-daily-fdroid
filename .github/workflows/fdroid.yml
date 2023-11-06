@@ -146,6 +146,8 @@ jobs:
 
           git add README.md .github\apk-count.json && \
           git commit -m"Automated update README and APK count" && \
+          git add fdroid/metadata && \
+          git commit -m"Automated update cached repo metadata" && \
           git pull && \
           git push
 
