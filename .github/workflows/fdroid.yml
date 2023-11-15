@@ -37,7 +37,13 @@ jobs:
 
       - name: Create basic directory structure (Windows)
         if: runner.os == 'Windows'
-        run: mkdir fdroid\repo -ErrorAction SilentlyContinue
+        # https://docs.python.org/3/library/venv.html
+        run: |
+          python3 -m venv fdroidserver-env
+          .\fdroidserver-env\Scripts\Activate.ps1
+          pip install git+https://gitlab.com/fdroid/fdroidserver.git
+
+        #mkdir fdroid\repo -ErrorAction SilentlyContinue
 
       - name: Set up JDK 21
         uses: actions/setup-java@v3

@@ -97,8 +97,12 @@ func main() {
 
 		log.Printf("Received %d releases", len(releases))
 
+		var gotGoodRelease bool = false
 		for _, release := range releases {
 			fmt.Printf("::group::Release %s\n", release.GetTagName())
+			if gotGoodRelease {
+				break
+			}
 			func() {
 				defer fmt.Println("::endgroup::")
 
@@ -164,6 +168,7 @@ func main() {
 				}
 
 				log.Printf("Successfully downloaded app for version %q", release.GetTagName())
+				gotGoodRelease = true
 			}()
 		}
 	}
