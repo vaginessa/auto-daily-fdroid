@@ -234,11 +234,17 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
     endGroup();
 
+    const splitGitRe = /^https:\/\/github\.com\/(.*?)\/(.*?)$/i
+
     const apkInfoMap: Record<string, AppInfo> = {};
 
     const grapqlResult = await octokit.graphql<GraphqlResult>(`
         query {
-            ${appsListArray.map((app, i) => `res_${i}: repository(owner:${JSON.stringify(app.author)}, name:${JSON.stringify(app.name)}, followRenames: true) { ...doProcessing }`).join('\n')}
+            ${appsListArray.map((app, i) => {
+                const split = app.git.match(splitGitRe);
+                if (split === null) throw new Error('No split!! ' + app.git);
+                return `res_${i}: repository(owner:${JSON.stringify(split[1])}, name:${JSON.stringify(split[2])}, followRenames: true) { ...doProcessing }`
+            }).join('\n')}
         }
 
         fragment doProcessing on Repository {
