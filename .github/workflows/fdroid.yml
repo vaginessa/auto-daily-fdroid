@@ -62,7 +62,7 @@ jobs:
           version: 8
 
       - name: Install tsx globally
-        run: pnpm global add tsx
+        run: pnpm add -g tsx
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
