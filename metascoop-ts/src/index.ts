@@ -9,6 +9,7 @@ import { IndexV1 } from "./repo-index-types";
 import { FDroidDataMetadata2 } from "./metadata-types";
 import { parse, compare } from 'semver';
 import { Entry, Files, GraphqlResult, Release, ReleaseAsset } from "./graphql";
+import Handlebars from 'handlebars';
 
 interface AppInfo {
     git: string;
@@ -181,53 +182,42 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
 	await fsxt.writeFile(path, dumpYaml(data));
 }
 
-//const (
-//	tableStart = "<!-- This table is auto-generated. Do not edit -->"
-//
-//	tableEnd = "<!-- end apps table -->"
-//
-//	tableTmpl = `
-//| Icon | Name | Description | Version |
-//| --- | --- | --- | --- |{{range .Apps}}
-//| <a href="{{.sourceCode}}"><img src="fdroid/repo/icons/{{.icon}}" alt="{{.name}} icon" width="36px" height="36px"></a> | [**{{.name}}**]({{.sourceCode}}) | {{.summary}} | {{.suggestedVersionName}} ({{.suggestedVersionCode}}) |{{end}}
-//` + tableEnd
-//)
-//
-//var tmpl = template.Must(template.New("").Parse(tableTmpl))
-//
-//function RegenerateReadme(readMePath: string, index: RepoIndex) {
-//	content, err := os.ReadFile(readMePath)
-//	if err != nil {
-//		return
-//	}
-//
-//	var tableStartIndex = bytes.Index(content, []byte(tableStart))
-//	if tableStartIndex < 0 {
-//		return fmt.Errorf("cannot find table start in %q", readMePath)
-//	}
-//
-//	var tableEndIndex = bytes.Index(content, []byte(tableEnd))
-//	if tableEndIndex < 0 {
-//		return fmt.Errorf("cannot find table end in %q", readMePath)
-//	}
-//
-//	var table bytes.Buffer
-//
-//	table.WriteString(tableStart)
-//
-//	err = tmpl.Execute(&table, index)
-//	if err != nil {
-//		return err
-//	}
-//
-//	newContent := []byte{}
-//
-//	newContent = append(newContent, content[:tableStartIndex]...)
-//	newContent = append(newContent, table.Bytes()...)
-//	newContent = append(newContent, content[tableEndIndex:]...)
-//
-//	return os.WriteFile(readMePath, newContent, os.ModePerm)
-//}
+const
+	tableStart = "<!-- This table is auto-generated. Do not edit -->",
+
+	tableEnd = "<!-- end apps table -->",
+
+	tableTmpl = `
+| Icon | Name | Description | Version |
+| --- | --- | --- | --- |{{#each Apps}}
+| <a href="{{sourceCode}}"><img src="fdroid/repo/icons/{{icon}}" alt="{{name}} icon" width="36px" height="36px"></a> | [**{{name}}**]({{sourceCode}}) | {{summary}} | {{suggestedVersionName}} ({{suggestedVersionCode}}) |{{/each}}
+` + tableEnd;
+
+var tmpl = Handlebars.compile(tableTmpl);
+
+async function regenerateReadme(readMePath: string, index: IndexV1) {
+	const content = await fsxt.readFile(readMePath, 'utf-8');
+
+    const tableStartIndex = content.indexOf(tableStart);
+	if (tableStartIndex < 0) {
+		throw new Error(`cannot find table start in ${readMePath}`);
+	}
+
+	const tableEndIndex = content.indexOf(tableEnd);
+	if (tableEndIndex < 0) {
+		throw new Error(`cannot find table end in ${readMePath}`);
+	}
+
+	const result = tmpl(index);
+
+	let newContent = '';
+
+	newContent += content.slice(0, tableStartIndex);
+	newContent += result;
+	newContent += content.slice(tableEndIndex + tableEnd.length);
+
+	return await fsxt.writeFile(readMePath, newContent);
+}
 
 (async () => {
     startGroup('Initializing');
@@ -649,11 +639,7 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
         // We can now generate the README file
         const readmePath = path.join(path.dirname(path.dirname(repoDirectory)), "README.md")
 
-        // TODO: not implemented yet
-        //err = md.RegenerateReadme(readmePath, fdroidIndex)
-        //if err != nil {
-        //    log.Fatalf("error generating %q: %s\n", readmePath, err.Error())
-        //}
+        await regenerateReadme(readmePath, fdroidIndex);
     }
 
 
