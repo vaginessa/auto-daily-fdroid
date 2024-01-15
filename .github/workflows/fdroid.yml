@@ -39,8 +39,6 @@ jobs:
         if: runner.os == 'Windows'
         # https://docs.python.org/3/library/venv.html
         run: |
-          python3 -m venv fdroidserver-env
-          .\fdroidserver-env\Scripts\Activate.ps1
           pip install androguard
           pip install git+https://gitlab.com/fdroid/fdroidserver.git
 
