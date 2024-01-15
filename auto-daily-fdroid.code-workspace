@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "E:/TempStuff/actions"
+		}
+	],
+	"settings": {
+		"yaml.schemas": {
+			"https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": "file:///e%3A/TempStuff/actions/calibre-image-actions/docker-compose.test.yml"
+		}
+	}
+}

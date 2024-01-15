@@ -1,0 +1,2819 @@
+{
+  "data": {
+    "TachiyomiSY": {
+      "files": {
+        "e": [
+          {
+            "n": ".editorconfig",
+            "t": "blob",
+            "o": {
+              "b": 561
+            }
+          },
+          {
+            "n": ".gitattributes",
+            "t": "blob",
+            "o": {
+              "b": 304
+            }
+          },
+          {
+            "n": ".github",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "FUNDING.yml",
+                  "t": "blob",
+                  "o": {
+                    "b": 16
+                  }
+                },
+                {
+                  "n": "ISSUE_TEMPLATE.md",
+                  "t": "blob",
+                  "o": {
+                    "b": 1098
+                  }
+                },
+                {
+                  "n": "ISSUE_TEMPLATE",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "config.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 564
+                        }
+                      },
+                      {
+                        "n": "report_issue.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 3468
+                        }
+                      },
+                      {
+                        "n": "request_feature.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 1470
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "pull_request_template.md",
+                  "t": "blob",
+                  "o": {
+                    "b": 504
+                  }
+                },
+                {
+                  "n": "readme-images",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "app-icon.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 4621
+                        }
+                      },
+                      {
+                        "n": "screens.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 500828
+                        }
+                      },
+                      {
+                        "n": "sy_logo.svg",
+                        "t": "blob",
+                        "o": {
+                          "b": 2238
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "workflows",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "build_check.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 970
+                        }
+                      },
+                      {
+                        "n": "build_push.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 3538
+                        }
+                      },
+                      {
+                        "n": "build_push_preview.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 1017
+                        }
+                      },
+                      {
+                        "n": "issue_moderator.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 1843
+                        }
+                      },
+                      {
+                        "n": "lock.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 338
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": ".gitignore",
+            "t": "blob",
+            "o": {
+              "b": 239
+            }
+          },
+          {
+            "n": ".idea",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "icon.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 14070
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "CODE_OF_CONDUCT.md",
+            "t": "blob",
+            "o": {
+              "b": 5304
+            }
+          },
+          {
+            "n": "CONTRIBUTING.md",
+            "t": "blob",
+            "o": {
+              "b": 2351
+            }
+          },
+          {
+            "n": "LICENSE",
+            "t": "blob",
+            "o": {
+              "b": 10173
+            }
+          },
+          {
+            "n": "README.md",
+            "t": "blob",
+            "o": {
+              "b": 6081
+            }
+          },
+          {
+            "n": "app",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 39
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 10691
+                  }
+                },
+                {
+                  "n": "proguard-android-optimize.txt",
+                  "t": "blob",
+                  "o": {
+                    "b": 725
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 10586
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "debug",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "res",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 13034
+                              }
+                            },
+                            {
+                              "n": "baseline-prof.txt",
+                              "t": "blob",
+                              "o": {
+                                "b": 3512629
+                              }
+                            },
+                            {
+                              "n": "ic_launcher-web.png",
+                              "t": "blob",
+                              "o": {
+                                "b": 21978
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            },
+                            {
+                              "n": "res",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "test",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "kotlin",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "build.gradle.kts",
+            "t": "blob",
+            "o": {
+              "b": 1720
+            }
+          },
+          {
+            "n": "buildSrc",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 7
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 264
+                  }
+                },
+                {
+                  "n": "settings.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 357
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "kotlin",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "core-metadata",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 423
+                  }
+                },
+                {
+                  "n": "consumer-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 0
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 750
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "core",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 1193
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "data",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 961
+                  }
+                },
+                {
+                  "n": "consumer-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 0
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 750
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            },
+                            {
+                              "n": "sqldelight",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "domain",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 875
+                  }
+                },
+                {
+                  "n": "consumer-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 0
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 750
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "test",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "gradle.properties",
+            "t": "blob",
+            "o": {
+              "b": 1059
+            }
+          },
+          {
+            "n": "gradle",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "androidx.versions.toml",
+                  "t": "blob",
+                  "o": {
+                    "b": 1683
+                  }
+                },
+                {
+                  "n": "compose.versions.toml",
+                  "t": "blob",
+                  "o": {
+                    "b": 1408
+                  }
+                },
+                {
+                  "n": "kotlinx.versions.toml",
+                  "t": "blob",
+                  "o": {
+                    "b": 1791
+                  }
+                },
+                {
+                  "n": "libs.versions.toml",
+                  "t": "blob",
+                  "o": {
+                    "b": 5158
+                  }
+                },
+                {
+                  "n": "sy.versions.toml",
+                  "t": "blob",
+                  "o": {
+                    "b": 557
+                  }
+                },
+                {
+                  "n": "wrapper",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": ".gitignore",
+                        "t": "blob",
+                        "o": {
+                          "b": 6
+                        }
+                      },
+                      {
+                        "n": "gradle-wrapper.jar",
+                        "t": "blob",
+                        "o": {
+                          "b": 63375
+                        }
+                      },
+                      {
+                        "n": "gradle-wrapper.properties",
+                        "t": "blob",
+                        "o": {
+                          "b": 250
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "gradlew",
+            "t": "blob",
+            "o": {
+              "b": 8409
+            }
+          },
+          {
+            "n": "gradlew.bat",
+            "t": "blob",
+            "o": {
+              "b": 2701
+            }
+          },
+          {
+            "n": "i18n",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 92
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 654
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "res",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "macrobenchmark",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "README.md",
+                  "t": "blob",
+                  "o": {
+                    "b": 772
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 1163
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 52
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "presentation-core",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 1944
+                  }
+                },
+                {
+                  "n": "consumer-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 0
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 750
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            },
+                            {
+                              "n": "res",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "presentation-widget",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 721
+                  }
+                },
+                {
+                  "n": "consumer-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 0
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 750
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "main",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 1670
+                              }
+                            },
+                            {
+                              "n": "java",
+                              "t": "tree",
+                              "o": {}
+                            },
+                            {
+                              "n": "res",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "settings.gradle.kts",
+            "t": "blob",
+            "o": {
+              "b": 1332
+            }
+          },
+          {
+            "n": "source-api",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 1107
+                  }
+                },
+                {
+                  "n": "consumer-proguard.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 403
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "androidMain",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "kotlin",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "commonMain",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "kotlin",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "source-local",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 6
+                  }
+                },
+                {
+                  "n": "build.gradle.kts",
+                  "t": "blob",
+                  "o": {
+                    "b": 1250
+                  }
+                },
+                {
+                  "n": "consumer-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 0
+                  }
+                },
+                {
+                  "n": "proguard-rules.pro",
+                  "t": "blob",
+                  "o": {
+                    "b": 750
+                  }
+                },
+                {
+                  "n": "src",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "androidMain",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "AndroidManifest.xml",
+                              "t": "blob",
+                              "o": {
+                                "b": 51
+                              }
+                            },
+                            {
+                              "n": "kotlin",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "commonMain",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "kotlin",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "description": "Free and open source manga reader for Android",
+      "licenseInfo": {
+        "spdxId": "Apache-2.0"
+      },
+      "releases": {
+        "nodes": [
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.9.4",
+            "description": "## General\r\n* Based on Tachiyomi stable [0.14.7](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.14.7)(from 0.14.6)\r\n\r\n## MangaDex\r\n- Use ReadableAt for dates, fixes MangaPlus dates\r\n- Fix Reccomendations when Delegation is off (Thanks @Riztard)\r\n\r\n## E-H/Exh\r\n- Fix Thumbnails in Browse (Thanks @AntsyLich)\r\n- Fix Page Previews\r\n- Fix Page Preview Cache\r\n\r\n## Translations\r\n- Fix crash on Chinese Simplified\r\n\r\n---\r\n\r\n### Checksums\r\n\r\n| Variant | SHA-256 |\r\n| ------- | ------- |\r\n| Universal | 59a97dde57f7d9e411dd25bc244f602d758b646076ef51159b3bd9260144e178 |\r\n| arm64-v8a | 74b89a06f10af4d510d322ed80f4dc160d729ce0e16274f532dd0baa42428ae8 |\r\n| armeabi-v7a | 004758c72f628a619c4f6d950b40a906ec6b7e9c7a708caf19bd791b34063fc5 |\r\n| x86 | f42eec3ed9a836e1590ddc98badddd4e273f1260994d8b2d2dd4fe5117821064 |\r\n| x86_64 | f82bafd30cdd4922c6e2e08c5d30ba33e85bb8e47865dca45449d6cefcabe2bd |\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4H7OYI",
+                  "name": "TachiyomiSY-arm64-v8a.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.4/TachiyomiSY-arm64-v8a.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4H7OYJ",
+                  "name": "TachiyomiSY.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.4/TachiyomiSY.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4H7OYK",
+                  "name": "TachiyomiSY-x86.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.4/TachiyomiSY-x86.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4H7OYL",
+                  "name": "TachiyomiSY-armeabi-v7a.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.4/TachiyomiSY-armeabi-v7a.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4H7OYM",
+                  "name": "TachiyomiSY-x86_64.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.4/TachiyomiSY-x86_64.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.9.3",
+            "description": "* Hotfix for v1.9.2\r\n\r\n## General\r\n* Based on Tachiyomi stable [0.14.6](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.14.3)(from 0.14.3)\r\n* Add support for wsrv.nl data saver(Thanks @suhan-paradkar)\r\n\r\n## Browse\r\n* Handle refreshing Feed properly and allow manual refresh\r\n* Use Global Search UI for Feed\r\n\r\n## Manga\r\n* Fix open in webview for some sources\r\n\r\n## MangaDex\r\n* Fix MangaPlus chapters\r\n* Add MangaDex Data Saver support to MangaPlus Chapters\r\n\r\n## Reader\r\n* Add Smooth Scrolling for auto-scroll in Webtoon format (Thanks @Koranir)\r\n* Fix double pages when rotating the device (Thanks @Jays2Kings)\r\n* Fix Center Margin option for animated images and other issues\r\n\r\n## Migration\r\n* Add progress bar to the end of the migration so you can see whats happening\r\n* Improve performance a bit\r\n\r\n## Library\r\n* Fix common crashes\r\n* Fix tag sorting\r\n* Fix category selection\r\n\r\n## Updates\r\n* Fix common crashes\r\n\r\n## Batch Add\r\n* Fix random crashes\r\n\r\n## Translations\r\n* Improve chinese simplified translation(By @Howard20181)\r\n* Improve russian translation(By @Dexroneum)\r\n\r\n\r\n---\r\n\r\n### Checksums\r\n\r\n| Variant | SHA-256 |\r\n| ------- | ------- |\r\n| Universal | 3bfa20751fc27e5241f06966bb097b012007e21f8407a61021553e1ac2f0ddff |\r\n| arm64-v8a | 45faca759f7bd828e5cf60ad3d0e0a4938a6c9be432506b09966a6f6271313cd |\r\n| armeabi-v7a | 365e34ea00f5435e8d2750d20463cd6668ee30603ac400c4f053afbd9db3d476 |\r\n| x86 | 5588c9f2c64e72d4271f2cd520a057338eadaa64083cce015ebe4ffd6658c846 |\r\n| x86_64 | 7957d76d1bd779e3ddca6f270e8a7132eb5fab2c53310531e456b3a69662bfe5 |\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4GNzus",
+                  "name": "TachiyomiSY-arm64-v8a-1.9.3.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.3/TachiyomiSY-arm64-v8a-1.9.3.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNzut",
+                  "name": "TachiyomiSY-x86-1.9.3.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.3/TachiyomiSY-x86-1.9.3.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNzuu",
+                  "name": "TachiyomiSY-armeabi-v7a-1.9.3.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.3/TachiyomiSY-armeabi-v7a-1.9.3.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNzuv",
+                  "name": "TachiyomiSY-1.9.3.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.3/TachiyomiSY-1.9.3.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNzuw",
+                  "name": "TachiyomiSY-x86_64-1.9.3.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.3/TachiyomiSY-x86_64-1.9.3.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.9.2",
+            "description": "* Hotfix for v1.9.1\r\n\r\n## General\r\n* Based on Tachiyomi stable [0.14.6](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.14.3)(from 0.14.3)\r\n* Add support for wsrv.nl data saver(Thanks @suhan-paradkar)\r\n\r\n## Browse\r\n* Handle refreshing Feed properly and allow manual refresh\r\n* Use Global Search UI for Feed\r\n\r\n## Manga\r\n* Fix open in webview for some sources\r\n\r\n## MangaDex\r\n* Fix MangaPlus chapters\r\n* Add MangaDex Data Saver support to MangaPlus Chapters\r\n\r\n## Reader\r\n* Add Smooth Scrolling for auto-scroll in Webtoon format (Thanks @Koranir)\r\n* Fix double pages when rotating the device (Thanks @Jays2Kings)\r\n* Fix Center Margin option for animated images and other issues\r\n\r\n## Migration\r\n* Add progress bar to the end of the migration so you can see whats happening\r\n* Improve performance a bit\r\n\r\n## Library\r\n* Fix common crashes\r\n* Fix tag sorting\r\n* Fix category selection\r\n\r\n## Updates\r\n* Fix common crashes\r\n\r\n## Batch Add\r\n* Fix random crashes\r\n\r\n## Translations\r\n* Improve chinese simplified translation(By @Howard20181)\r\n* Improve russian translation(By @Dexroneum)\r\n\r\n---\r\n\r\n### Checksums\r\n\r\n| Variant | SHA-256 |\r\n| ------- | ------- |\r\n| Universal | 709f4980a55dce1e1014ca4272abe564ddef06b321780161d444369cf3e66d42 |\r\n| arm64-v8a | 8f410a1d23e758098a25085788c964aaed2b1cfd63952b2b5b26938b6e2e5d1f |\r\n| armeabi-v7a | c6c105f750f9da80ca391e2a99884a81e383e9fd26b3c3085fb0c8e245b4f7f9 |\r\n| x86 | e94f0f11a4630ac142bef4708711d70dee97c5b2d937219ef16b776a935a8fe5 |\r\n| x86_64 | a32c9ece2daa2425684d392f95d7c08a4948cab26f99d75e34560a10ac36fb3f |\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4GNN0Y",
+                  "name": "TachiyomiSY-1.9.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.2/TachiyomiSY-1.9.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNN0Z",
+                  "name": "TachiyomiSY-arm64-v8a-1.9.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.2/TachiyomiSY-arm64-v8a-1.9.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNN0a",
+                  "name": "TachiyomiSY-armeabi-v7a-1.9.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.2/TachiyomiSY-armeabi-v7a-1.9.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNN0b",
+                  "name": "TachiyomiSY-x86-1.9.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.2/TachiyomiSY-x86-1.9.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GNN0c",
+                  "name": "TachiyomiSY-x86_64-1.9.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.2/TachiyomiSY-x86_64-1.9.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.9.1",
+            "description": "## General\r\n* Based on Tachiyomi stable [0.14.6](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.14.3)(from 0.14.3)\r\n* Add support for wsrv.nl data saver(Thanks @suhan-paradkar)\r\n\r\n## Browse\r\n* Handle refreshing Feed properly and allow manual refresh\r\n* Use Global Search UI for Feed\r\n\r\n## Manga\r\n* Fix open in webview for some sources\r\n\r\n## MangaDex\r\n* Fix MangaPlus chapters\r\n* Add MangaDex Data Saver support to MangaPlus Chapters\r\n\r\n## Reader\r\n* Add Smooth Scrolling for auto-scroll in Webtoon format (Thanks @Koranir)\r\n* Fix double pages when rotating the device (Thanks @Jays2Kings)\r\n* Fix Center Margin option for animated images and other issues\r\n\r\n## Migration\r\n* Add progress bar to the end of the migration so you can see whats happening\r\n* Improve performance a bit\r\n\r\n## Library\r\n* Fix common crashes\r\n* Fix tag sorting\r\n* Fix category selection\r\n\r\n## Updates\r\n* Fix common crashes\r\n\r\n## Batch Add\r\n* Fix random crashes\r\n\r\n## Translations\r\n* Improve chinese simplified translation(By @Howard20181)\r\n* Improve russian translation(By @Dexroneum)\r\n\r\n---\r\n\r\n### Checksums\r\n\r\n| Variant | SHA-256 |\r\n| ------- | ------- |\r\n| Universal | af95879e53fd18ead781bc2a7c433bbeaf88fb0aaf6e9282e02ce5b094961fb3 |\r\n| arm64-v8a | 791720021accc96a4475158aa997df4341541f358dd718d5655da623dab12c64 |\r\n| armeabi-v7a | 8d268ebb6b2931f3b1e4f4292dad952f0bef0e246fe69f3a7fb02c65adffe8c8 |\r\n| x86 | de339fd6bdb5310e9fd6297fde6923d6b0a2e6d27e9fde2af3bc278537bc6e7e |\r\n| x86_64 | 207ad7b218c892a7e4f981e379c89ced6c6724f532afea3666b76255229a4bda |\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4GMox1",
+                  "name": "TachiyomiSY-arm64-v8a.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.1/TachiyomiSY-arm64-v8a.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GMox2",
+                  "name": "TachiyomiSY-armeabi-v7a.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.1/TachiyomiSY-armeabi-v7a.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GMox3",
+                  "name": "TachiyomiSY.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.1/TachiyomiSY.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GMox4",
+                  "name": "TachiyomiSY-x86.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.1/TachiyomiSY-x86.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                },
+                {
+                  "id": "RA_kwDODvj2vc4GMox5",
+                  "name": "TachiyomiSY-x86_64.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.1/TachiyomiSY-x86_64.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.9.0",
+            "description": "## General\r\n* Based on Tachiyomi stable [0.14.3](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.14.3)(from 0.13.6)\r\n\r\n## Library\r\n* Removed Drag & Drop\r\n\r\n## Reccomendations\r\n* Use Tracker recs if possible\r\n* Fix reccomendations not showing reccomendations\r\n\r\n## EHentai\r\n* Support new E-H/EXH search engine\r\n* Add custom igneous cookie option\r\n* Add page previews\r\n* Update Autofill E-Hentai tags\r\n* Improve E-H/Exh toplist support\r\n\r\n## NHentai\r\n* Add page previews\r\n\r\n## Merged Manga\r\n* Deduplication for chapters added\r\n* Show merged chapters in updates\r\n* Option to move merge button to overflow menu (Thanks @Re-Tails)\r\n\r\n## MangaDex\r\n* Use new OAuth Login\r\n* Fix mangadex group deeplink not only searching mangadex sources\r\n* Remove links from MangaDex manga\r\n\r\n## Browse\r\n* Support external extension repos better\r\n* Removed AutoCaptcha solver\r\n\r\n## Translations\r\n* Improve chinese simplified translation(By @Howard20181)\r\n* Improve russian translation(By @Dexroneum)\r\n\r\n---\r\n\r\n### Checksums\r\n\r\n| Variant | SHA-256 |\r\n| ------- | ------- |\r\n| Universal | 92c1e025c55de47e6a058f3e01128124ba5081b8c304979ce05e7ef7125fe027 |\r\n| arm64-v8a | 11d050ec55871d331e8dd4a90f83b2dd6196eebad1b5a19402bbf60ccd9d2d9f |\r\n| armeabi-v7a | 20c4058a972f53b5e2bc9ba29ae43c324591bb7497202e6216da986292ca95d7 |\r\n| x86 | 11f7e802e86fc39bdbc22fcb6c39dd85867618c8e8f85159ba71b135d85dd681 |\r\n| x86_64 | 733090dcef7c76fc5e1cc07129dfa95082d402616c838322b25c096a5460a900 |\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4Fn2fo",
+                  "name": "TachiyomiSY_1.9.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.9.0/TachiyomiSY_1.9.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.8.5",
+            "description": "## General\r\n* Based on Tachiyomi stable [0.13.6](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.13.6)(from 0.13.5)\r\n\r\n## Source\r\n* Update EH tags for auto-complete filter\r\n* Update supported MangaDex languages",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4Ec-ry",
+                  "name": "TachiyomiSY_1.8.5.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.8.5/TachiyomiSY_1.8.5.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.8.4",
+            "description": "## General\r\n* Based on Tachiyomi stable [0.13.5](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.13.5)(from 0.13.4)\r\n\r\n## Library\r\n* Fix On Hiatus dynamic category\r\n* Fix group by tracking\r\n\r\n## Migration\r\n* Migrate custom covers\r\n* Improve sheet selection items\r\n\r\n## Reader\r\n* Use Tachiyomi Image decoder for double pages, fixes certain image types not loading for double pages\r\n* Only use auto-scroll when app is in focus\r\n\r\n## Sources\r\n### Merged\r\n* Stop ddos when updating a merge manga\r\n* Fix auto-downloading\r\n\r\n### Mangadex\r\n* Fix blocked uploaders\r\n\r\n### EHentai\r\n* Add visibility virtual tag, you can now search for expunged in the library",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4EQo9O",
+                  "name": "TachiyomiSY_1.8.4.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.8.4/TachiyomiSY_1.8.4.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.8.3",
+            "description": "## General\r\n* Based on Tachiyomi stable [0.13.4](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.13.4)(from 0.13.3)\r\n\r\n## Translations\r\n* Added chinese simplified translation(By @Howard20181)",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4DxyPy",
+                  "name": "TachiyomiSY_1.8.3.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.8.3/TachiyomiSY_1.8.3.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.8.2",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.13.3(from 0.13.1)\r\n\r\n## Feed\r\n* Replace Latest tab with Feed menu for using saved searches\r\n* Add Sources feed to combined Browse/Latest menu by long clicking a saved search\r\n\r\n## Sources\r\n### Mangadex\r\n* Support Mangadex blocked groups and uploaders extension setting\r\n### E-Hentai\r\n* Improve E-H redirect to existing galleries\r\n### Tsumino\r\n* Fix Email Protected issues\r\n### HBrowse\r\n* Fix new galleries\r\n\r\n## Migration\r\n* Improve migration sheet (@CrepeTF)\r\n* Fix rounded corners for migration menu\r\n\r\n## Manga\r\n* Only show scanlator filter if there are 2 or over scanlators\r\n\r\n## Downloads\r\n* Fix renamed manga delete after read\r\n* Save combined image now respects folderPerManga (@curche)\r\n\r\n## Advanced\r\n* Fix clear database keep read setting\r\n\r\n## Translations\r\n* Updated Russian translations (By @D3xron and @e-shl)",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4DvOwK",
+                  "name": "TachiyomiSY_1.8.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.8.2/TachiyomiSY_1.8.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.8.1",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.13.1(from 0.13.0)\r\n\r\n## Sources\r\n### MangaDex\r\n* Support blocked groups and uploaders from the extension\r\n\r\n## Reader\r\n* Fixed delete after read for renamed manga\r\n\r\n# 1.8.0 Changelog\r\n## General\r\n* Based on Tachiyomi stable 0.13.0(from 0.11.1)\r\n\r\n## Library\r\n* When Favourites sync takes longer then 5 seconds for a gallery, display the gallery name\r\n* Replace Favourites Sync realm database with the regular database\r\n* Fix some sources not updating when grouping by source\r\n* Fix library bottom bar display getting stuck\r\n\r\n## Sources\r\n### ExHentai/E-Hentai\r\n* Search EHentai uploader on click\r\n* Fix EH/ExhHentai duplicate results in search\r\n* Add EH/ExhHentai popular as the default browse menu\r\n* Add a toplists filter for E-Hentai\r\n* Throw error when ExHentai igneous cookie is mystery\r\n* Improve E-H gallery updater by converting it to WorkManager\r\n* Updated E-Hentai tag list for auto-complete view\r\n* Replace Icon with a better one\r\n### Merged\r\n* Add way to open merged mangas in webview\r\n* Fix merged manga delete after read\r\n* Fix merged source chapters getting added to the download queue\r\n### Hitomi\r\n* Improve Hitomi tag list\r\n### Tsumino\r\n* Better support tag search\r\n* Stop excluding Tsumino from library updates\r\n### MangaDex\r\n* Re-Add MangaDex delegation\r\n* Add support for multiple external websites, such as\r\n* - MangaPlus\r\n* - Bilibili\r\n* - Azuki (By @JopeJoe1)\r\n* - MangaHot (By @JopeJoe1)\r\n* MDList tracker, chapter progress is not implemented in the API yet\r\n* MangaDex Similar and MangaDex Relations in the reccomendations view\r\n* MangaDex Follows\r\n* MangaDex Random\r\n* And a few others that I cant think of at the top of my head\r\n\r\n## Manga\r\n* Improve filter by scanlator to handle all sources\r\n* Rename manga directory if title changes\r\n\r\n## Reader\r\n* Add duel page viewer\r\n* Add cancel button in reader chapters dialog\r\n* Add new websites for Webtoon mode trigger (By @joseph619)\r\n* Fix chapter navigation for pager reader\r\n* Fix reader chapter list filtering/sort\r\n* Fix bookmarking in reader changing chapter to unread\r\n* Fix bookmarking in reader scrolling the chapter list\r\n\r\n## Migration\r\n* Fix crash when opening reader or webview during migration\r\n* Add way to keep the manga when cancelling migration\r\n\r\n## Browse\r\n* Handle the + for configurable sources better(By @curche)\r\n\r\n## Batch add\r\n* Fix and improve Batch add (By @D3xron)\r\n\r\n## Appearence\r\n* Add navbar category to appearence settings (By @curche)\r\n* Change how the show history/updates buttons option works\r\n* Remove pure red theme\r\n\r\n## Backup\r\n* Add option to backup all read manga in addition your library\r\n* Sync edited info fields with J2k (By @null-dev)\r\n\r\n## Security\r\n* Add bio-metric time range\r\n\r\n## Advanced options\r\n* Add a way to exclude sources from data saver\r\n* Add a way to exclude the downloader from data saver\r\n* Add a way to clear the latest view sources\r\n* Add a way to reset viewer for all manga\r\n* Add a way to force migrate all NHentai manga to NHentai(ALL)\r\n* Improve list scheduled jobs option for workmanager jobs\r\n\r\n## Translations\r\n* Updated PT-BR translations(By @Sam-Oak)\r\n* Updated Russian translations (By @D3xron and @e-shl)\r\n* Add Indonesian translation (By @HaruSasaki)",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4DUABv",
+                  "name": "TachiyomiSY_1.8.1.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.8.1/TachiyomiSY_1.8.1.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.8.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.13.0(from 0.11.1)\r\n\r\n## Library\r\n* When Favourites sync takes longer then 5 seconds for a gallery, display the gallery name\r\n* Replace Favourites Sync realm database with the regular database\r\n* Fix some sources not updating when grouping by source\r\n* Fix library bottom bar display getting stuck\r\n\r\n## Sources\r\n### ExHentai/E-Hentai\r\n* Search EHentai uploader on click\r\n* Fix EH/ExhHentai duplicate results in search\r\n* Add EH/ExhHentai popular as the default browse menu\r\n* Add a toplists filter for E-Hentai\r\n* Throw error when ExHentai igneous cookie is mystery\r\n* Improve E-H gallery updater by converting it to WorkManager\r\n* Updated E-Hentai tag list for auto-complete view\r\n* Replace Icon with a better one\r\n### Merged\r\n* Add way to open merged mangas in webview\r\n* Fix merged manga delete after read\r\n* Fix merged source chapters getting added to the download queue\r\n### Hitomi\r\n* Improve Hitomi tag list\r\n### Tsumino\r\n* Better support tag search\r\n* Stop excluding Tsumino from library updates\r\n### MangaDex\r\n* Re-Add MangaDex delegation\r\n* Add support for multiple external websites, such as\r\n* - MangaPlus\r\n* - Bilibili\r\n* - Azuki (By @JopeJoe1)\r\n* - MangaHot (By @JopeJoe1)\r\n* MDList tracker, chapter progress is not implemented in the API yet\r\n* MangaDex Similar and MangaDex Relations in the reccomendations view\r\n* MangaDex Follows\r\n* MangaDex Random\r\n* And a few others that I cant think of at the top of my head\r\n\r\n## Manga\r\n* Improve filter by scanlator to handle all sources\r\n* Rename manga directory if title changes\r\n\r\n## Reader\r\n* Add duel page viewer\r\n* Add cancel button in reader chapters dialog\r\n* Add new websites for Webtoon mode trigger (By @joseph619)\r\n* Fix chapter navigation for pager reader\r\n* Fix reader chapter list filtering/sort\r\n* Fix bookmarking in reader changing chapter to unread\r\n* Fix bookmarking in reader scrolling the chapter list\r\n\r\n## Migration\r\n* Fix crash when opening reader or webview during migration\r\n* Add way to keep the manga when cancelling migration\r\n\r\n## Browse\r\n* Handle the + for configurable sources better(By @curche)\r\n\r\n## Batch add\r\n* Fix and improve Batch add (By @D3xron)\r\n\r\n## Appearence\r\n* Add navbar category to appearence settings (By @curche)\r\n* Change how the show history/updates buttons option works\r\n* Remove pure red theme\r\n\r\n## Backup\r\n* Add option to backup all read manga in addition your library\r\n* Sync edited info fields with J2k (By @null-dev)\r\n\r\n## Security\r\n* Add bio-metric time range\r\n\r\n## Advanced options\r\n* Add a way to exclude sources from data saver\r\n* Add a way to exclude the downloader from data saver\r\n* Add a way to clear the latest view sources\r\n* Add a way to reset viewer for all manga\r\n* Add a way to force migrate all NHentai manga to NHentai(ALL)\r\n* Improve list scheduled jobs option for workmanager jobs\r\n\r\n## Translations\r\n* Updated PT-BR translations(By @Sam-Oak)\r\n* Updated Russian translations (By @D3xron and @e-shl)\r\n* Add Indonesian translation (By @HaruSasaki)",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDODvj2vc4DTm2w",
+                  "name": "TachiyomiSY_1.8.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.8.0/TachiyomiSY_1.8.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.7.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.11.1(from 0.10.12)\r\n* Drop support for Android 5\r\n\r\n## Lewd\r\n* Add more lewd tag checks (Jobobby04, E-SHL)\r\n\r\n## Reader \r\n* Add reader bottom button customization\r\n* Convert chapter bottom sheet to a dialog\r\n\r\n## Migration\r\n* Browse source from migration now properly adds it as a result\r\n\r\n## Sources\r\n* Exh login menu now supports a custom igneous cookie\r\n* Exh sync fixes, now doesn't stop on missing galleries",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDM3OTIyNzU1",
+                  "name": "TachiyomiSY_1.7.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.7.0/TachiyomiSY_1.7.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.6.2",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.12(from 0.10.11)\r\n\r\n## Themes\r\n* Added Dark Blue AMOLED theme\r\n\r\n## Downloads\r\n* Fix Cleanup Orphaned Downloads removing manga downloads when it shouldn't have",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDM2MDExMTgw",
+                  "name": "TachiyomiSY_1.6.2.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.6.2/TachiyomiSY_1.6.2.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.6.1",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.11(from 0.10.10)\r\n\r\n## Library\r\nRemove useless source migration action from overflow\r\n\r\n## Migration\r\nEnhanced chapter migration from J2K\r\nRemoved merged manga ability to migrate\r\n\r\n## Translations\r\nEnhanced Russian Translation by @e-shl\r\n\r\n## Debug\r\nAdd ability to fix really old full backups from SY using a debug function",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDM1NDEzNTQw",
+                  "name": "TachiyomiSY_1.6.1.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.6.1/TachiyomiSY_1.6.1.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.6.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.10(from 0.10.9)\r\n* Clear db now has a option to keep read manga\r\n* Clear db now works properly with merged manga\r\n\r\n## Backup\r\n* Backup custom manga info\r\n\r\n## Manga\r\n* Edit manga status\r\n\r\n## Source\r\n* Disable all Mangadex features, such as tracking, deeplink, and delegation features\r\n* EHentai updater should die less\r\n* Fix 8Muses delegation\r\n\r\n## Logging\r\n* Logs now output to file, logging to file is now useful, and can be used to debug\r\n\r\n## Reader\r\n* Vertical Seekbar for webtoon and vertical\r\n\r\n## Browse/Latest\r\n* Errors now populate instead of just saying no results found\r\n\r\n## Merged\r\n* Fix download error with scanlators\r\n\r\n## Themes\r\n* New Hot Pink theme by OncePunchedBot\r\n\r\n## Migration\r\n* Fix Migration getting stuck\r\n* Fix crash when opening chapter from manual search in migration",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDM0ODM0NjU0",
+                  "name": "TachiyomiSY_1.6.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.6.0/TachiyomiSY_1.6.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.5.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.9(from 0.10.7)\r\n\r\n## Reader\r\n* Clicking the title now takes you to the manga page\r\n* Enhanced Reader Bottom menu\r\n\r\n## Tracking\r\n* MDList now works for all manga, not just mangadex manga\r\n\r\n## Backup\r\n* Backup now backs up read manga not in library\r\n\r\n## Updates\r\n* Library update now updates manga from different sources in parallel\r\n\r\n## Merged Manga\r\n* Fix Merged manga chapters not being marked as read on the manga page after reading\r\n* Fix Merged manga downloads\r\n\r\n## Recommendations\r\n* Fix Similar Manga notification\r\n\r\n## Mangadex\r\n* Use new Mangadex API server and API v2\r\n* Deeplink Mangadex chapters\r\n* Fix Mangadex Deeplink errors\r\n* Fix Mangadex login autofill saving wrong info",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDMyMDIwNjA0",
+                  "name": "TachiyomiSY_1.5.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.5.0/TachiyomiSY_1.5.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.4.1",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.7(from 0.10.6)\r\n\r\n## Reader\r\n* Add separate crop borders setting for Continues Vertical\r\n\r\n## Extensions\r\n* Add simple external repo support\r\n\r\n## Sources\r\n* Deeplink and Batch add will now only search enabled sources\r\n* Maybe fix push to Mangadex\r\n\r\n## Recommendations\r\n* Improve Anilist rec names(thanks She11sh0cked)\r\n\r\n## Merged Manga\r\n* Fix crashes with Merge Settings\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDI5ODUzNTE3",
+                  "name": "TachiyomiSY_1.4.1.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.4.1/TachiyomiSY_1.4.1.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.4.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.6(from 0.10.5)\r\n* NEW ICON! Thanks to Aytox who made it!\r\n* Add french translation, thanks to Adam-sama\r\n* Double clicking the updates bottom bar button will open downloads\r\n* Add a way to exclude manga in certain categories from auto delete\r\n\r\n## UI\r\n* Enhance More Info menu\r\n* Cleanup the looks of manga extra info\r\n\r\n## Library\r\n* Add Sort by Tags library sorting method, adds a customizable list of tags that manga will by sorted by the position of the tag in the list\r\n* Update Lewd manga filter to include new sources and tags\r\n\r\n## Manga\r\n* Add share and save cover when cover is expanded\r\n* Add ability to filter scanlators on delegated source manga\r\n* Use E-Hentai date format for E-Hentai manga\r\n\r\n## Reader\r\n* Fix Smart background so it works properly(it half worked before)\r\n\r\n## Recommendations\r\n* Community recommendations enhancements, errors now properly show\r\n* Add ability to use Neko similar manga for Mangadex manga\r\n\r\n## Sources\r\n* Support the short title NHentai source setting\r\n* Switch to the Mangadex extension for the low quality cover setting\r\n* Add push to Mangadex in Mangadex settings\r\n* Fix Mangadex settings inconsistencies\r\n* If the E-Hentai download limit exceeded image is sent, stop downloading\r\n* EHentai options will be hidden instead of greyed out when not logged in\r\n\r\n## Tracking\r\n* Fix MDList tracking stalling when it thinks its logged in but its not\r\n* Fix MDList tracking getting set to complete when its not\r\n\r\n## Migration\r\n* E-Hentai migrations will be throttled so that you dont get banned\r\n* Migrating will migrate viewer, chapter sort, and other stuff\r\n\r\n## Backend\r\n* Migrate to Kotlin Serialization from Gson for a few things\r\n* Migrate from RxJava Relays to Kotlin Stateflows and Kotlin SharedFlows for a few things\r\n* Migrate SY specific Kotlin Synthetics to ViewBindings\r\n* Migrate RxJava Observables to Kotlin Flows where I can\r\n* Migrate Java Threads to Kotlin Coroutines\r\n* Drop Humanize library, use home built solution that can be translated using Android strings",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDI5NDc5NDE5",
+                  "name": "TachiyomiSY_1.4.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.4.0/TachiyomiSY_1.4.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.3.1",
+            "description": "## Sources\r\n* Fix Mangadex 2FA input\r\n\r\n## Browse\r\n* Set the new browse + latest view as default\r\n\r\n## Reader\r\n* Share manga info when you share a page\r\n* Tweak preload settings, make the max 20, defaults to 10\r\n\r\n## Backup\r\n* Fix backup for merged manga",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDI1NzA1NDk2",
+                  "name": "TachiyomiSY_1.3.1.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.3.1/TachiyomiSY_1.3.1.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.3.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.5(from 0.10.4)\r\n\r\n## Sources\r\n* Delegate MangaDex, add Mangadex Follows browse, import, push, and tracking, as well as a custom manga view!\r\n\r\n## Library\r\n* No title grid option\r\n* Add started filter\r\n\r\n## Reader\r\n\r\n* Grab J2k chapters bottom sheet\r\n* Add data saver proxy server support\r\n\r\n## Manga\r\n* Long click to copy metadata information\r\n* Expand manga thumbnails(Inspired by J2k)\r\n* Overhaul merge manga, its actually usable now\r\n* Always display read progress on E-Hentai chapters when preserve reading positon is enabled\r\n\r\n## Browse\r\n* Add combined latest/browse page as a option\r\n\r\n\r\n## Downloads\r\n* Add download as CBZ\r\n\r\n## Fixes\r\n* Network logging to file fixes",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDI1NjM2MjA1",
+                  "name": "TachiyomiSY_1.3.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.3.0/TachiyomiSY_1.3.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.2.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.4(from 0.10.2)\r\n* Cleanup orphaned downloads option (from J2k)\r\n\r\n## Sources\r\n* Delegate Hitomi, please download the extension to continue using your Hitomi manga\r\n* Delegate NHentai, please download the extension to continue using your NHentai manga\r\n* Delegate PervEden, please download the extension to continue using your PervEden manga\r\n* Delegate 8Muses, manga in your library cannot be migrated because of the extension format, 8Muses is in the EroMuse extension\r\n\r\n## Library\r\n* Dynamic Categories, inspired by J2ks feature, but written from the ground up, quickly organize your library into different sets of categories, by source, status, and tracking, or totally ungrouped, its in the library bottom sheet\r\n* Continue reading button, inspired by J2ks feature, it will take you to the first unread chapter, can be toggled in the library bottom sheet\r\n* Redo drag and drop, now you can drag and drop in any mode, and it will switch your mode to it when you drag and drop something\r\n* Quick clean Titles, adds a quick clean that will clean titles from manga from certain sources, it will quickly remove unnecessary bloat\r\n* Rewrite the library search engine (that was inherited from EH), it now can exclude, use quotes for absolute searches, it supports namespace tags, and a bunch more, its probably the most advanced search engine any Tachi fork has\r\n* Fix pressing download unread chapters on an Exh manga would download the latest chapter even if it was read\r\n\r\n## Reader\r\n* Smart Background, when using a pager like LTR, the background will now change color depending on the page (from J2k)\r\n* Force disable zoom out option for webtoon mode, no more do you accidently zoom out, on by default but can be toggled off (from J2k)\r\n\r\n## Manga\r\n* Finishing an Exh chapter will mark previous chapters as read\r\n* Don’t download new chapters after refreshing Exh manga\r\n\r\n## Fixes\r\n* Fix a migration crash that happened when the chapter list threw an exception\r\n* Fix a start-up crash that made the app unusable for some people\r\n* Some icon fixes\r\n* Change the way releases are built, likely fixes problems with installing the app for some people\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDIzODU4MzY4",
+                  "name": "TachiyomiSY_1.2.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.2.0/TachiyomiSY_1.2.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.1.1",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.2(from 0.10.1)\r\n## Sources\r\n* Delegated HBrowse, if you used that source please install the extension to continue using your manga",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDIzNTI2NDYz",
+                  "name": "TachiyomiSY_1.1.1.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.1.1/TachiyomiSY_1.1.1.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.1.0",
+            "description": "## General\r\n* Based on Tachiyomi stable 0.10.1(from 0.9.2)\r\n* Made the app translatable! Feel free to ask how to in the Tachiyomi discord or open a issue if you want to help with translations\r\n\r\n## View\r\n* Move to the new 0.10.0 manga page\r\n* Add move recommendations to overflow menu option\r\n* Add special browse view for E-Hentai\r\n* Add special manga info view to integrated and delegated sources\r\n* Add special tag view for certain sources\r\n* Made global search respect the source manga view setting\r\n\r\n## New features\r\n* Manga info edit\r\n* Pressing download unread chapters on E-Hentai manga will only download the latest version\r\n* Using the manga floating action button on E-Hentai manga will open the latest version\r\n\r\n## Source features\r\n* Allow hitomi.la users to select if they want to download manga as webp or not\r\n\r\n## Source fixes\r\n* Fix 8muses\r\n* Fix hitomi.la\r\n* Fix Pururin\r\n* Fix blacklisted nhentai sources\r\n\r\n## General fixes\r\n* Fix download badges for internal sources\r\n* Fix source category deletion crash\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDIzNTAwNDEw",
+                  "name": "TachiyomiSY_1.1.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.1.0/TachiyomiSY_1.1.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "1.0.0",
+            "description": "Features of Tachiyomi(original) include:\r\n* Online reading from sources such as MangaDex, MangaSee, Mangakakalot, [and more](https://github.com/inorichi/tachiyomi-extensions)\r\n* Local reading of downloaded manga\r\n* A configurable reader with multiple viewers, reading directions and other settings.\r\n* [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.io/), [Shikimori](https://shikimori.one), and [Bangumi](https://bgm.tv/) support\r\n* Categories to organize your library\r\n* Light and dark themes\r\n* Schedule updating your library for new chapters\r\n* Create backups locally to read offline or to your desired cloud service\r\n\r\nFeatures of TachiyomiSY include:\r\n* Uses the new Tachiyomi Stable UI\r\n* Custom manga page, all your needs, such as info and chapters, in front of your face\r\n* Latest tab, store up to 5 sources where you can easily view the latest manga by viewing the tab\r\n* Hentai features enable/disable, in advanced settings\r\n* Automatic webtoon detection, allowing the reader to switch to webtoon mode automatically when viewing one\r\n* Recommendations, from AZ but heavily modified by She11Shocked to use both MAL and Anilist interchangeably \r\n* Lewd filter, hide the lewd manga in your library when you want to\r\n* Tracking filter, filter your tracked manga so you can see them or see non-tracked manga, made by She11Shocked\r\n* Search tracking status in library, made by She11Shocked\r\n* Backup saved searches\r\n* New E-Hentai/ExHentai features, such as language settings and watched list settings\r\n* Comfortable grid view\r\n* Custom categories for sources, liked the pinned sources, but you can make your own versions and put any sources in them\r\n\r\nInherited from TachiyomiAZ or TachiyomiEH and are included and possibly modified in TachiyomiSY\r\n* Source migration, migrate all your manga from one source to another\r\n* Custom hentai sources:\r\n* * E-Hentai/ExHentai\r\n* * nHentai\r\n* * Hitomi.la\r\n* * 8Muses\r\n* * HBrowse\r\n* * Perv Eden\r\n* Additional features for some extensions, features include custom description, opening in app, batch add to library:\r\n* * Puruin\r\n* * Tsumino\r\n* * HentaiCafe (Foolside)\r\n* Saving searches\r\n* Autoscroll\r\n* Page preload customization\r\n* Customize image cache size\r\n* Batch import of custom sources and featured extensions\r\n* Automatic CAPTCHA solving\r\n* TriState Filters\r\n* Infinite history page\r\n* Search your history page\r\n* Advanced source settings page, searching, enable/disable all\r\n* Click tag for local search, long click tag for global search\r\n* Merge multiple of the same manga from different sources\r\n* Drag and drop library sorting",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "MDEyOlJlbGVhc2VBc3NldDIyNzM0NTI4",
+                  "name": "TachiyomiSY_1.0.0.apk",
+                  "downloadUrl": "https://github.com/jobobby04/TachiyomiSY/releases/download/1.0.0/TachiyomiSY_1.0.0.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "rockit": {
+      "files": {
+        "e": [
+          {
+            "n": ".github",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "screenshots",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "d-event.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 358398
+                        }
+                      },
+                      {
+                        "n": "d-events.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 439456
+                        }
+                      },
+                      {
+                        "n": "d-launch.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 346549
+                        }
+                      },
+                      {
+                        "n": "d-launches.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 517782
+                        }
+                      },
+                      {
+                        "n": "d-news.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 489841
+                        }
+                      },
+                      {
+                        "n": "d-search.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 494127
+                        }
+                      },
+                      {
+                        "n": "l-event.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 356639
+                        }
+                      },
+                      {
+                        "n": "l-events.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 446126
+                        }
+                      },
+                      {
+                        "n": "l-launch.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 340444
+                        }
+                      },
+                      {
+                        "n": "l-launches.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 525016
+                        }
+                      },
+                      {
+                        "n": "l-news.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 484937
+                        }
+                      },
+                      {
+                        "n": "l-search.jpg",
+                        "t": "blob",
+                        "o": {
+                          "b": 501756
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "workflows",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "android_build.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 2544
+                        }
+                      },
+                      {
+                        "n": "web_deploy.yml",
+                        "t": "blob",
+                        "o": {
+                          "b": 1093
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": ".gitignore",
+            "t": "blob",
+            "o": {
+              "b": 750
+            }
+          },
+          {
+            "n": ".metadata",
+            "t": "blob",
+            "o": {
+              "b": 305
+            }
+          },
+          {
+            "n": ".vscode",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "launch.json",
+                  "t": "blob",
+                  "o": {
+                    "b": 532
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "CNAME",
+            "t": "blob",
+            "o": {
+              "b": 15
+            }
+          },
+          {
+            "n": "LICENSE",
+            "t": "blob",
+            "o": {
+              "b": 1067
+            }
+          },
+          {
+            "n": "README.md",
+            "t": "blob",
+            "o": {
+              "b": 4243
+            }
+          },
+          {
+            "n": "analysis_options.yaml",
+            "t": "blob",
+            "o": {
+              "b": 1453
+            }
+          },
+          {
+            "n": "android",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": ".gitignore",
+                  "t": "blob",
+                  "o": {
+                    "b": 296
+                  }
+                },
+                {
+                  "n": "app",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "build.gradle",
+                        "t": "blob",
+                        "o": {
+                          "b": 2590
+                        }
+                      },
+                      {
+                        "n": "proguard-rules.pro",
+                        "t": "blob",
+                        "o": {
+                          "b": 932
+                        }
+                      },
+                      {
+                        "n": "src",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "debug",
+                              "t": "tree",
+                              "o": {}
+                            },
+                            {
+                              "n": "main",
+                              "t": "tree",
+                              "o": {}
+                            },
+                            {
+                              "n": "profile",
+                              "t": "tree",
+                              "o": {}
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "build.gradle",
+                  "t": "blob",
+                  "o": {
+                    "b": 576
+                  }
+                },
+                {
+                  "n": "gradle.properties",
+                  "t": "blob",
+                  "o": {
+                    "b": 82
+                  }
+                },
+                {
+                  "n": "gradle",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "wrapper",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "gradle-wrapper.properties",
+                              "t": "blob",
+                              "o": {
+                                "b": 231
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "settings.gradle",
+                  "t": "blob",
+                  "o": {
+                    "b": 462
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "assets",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "animations",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "One_Planet.riv",
+                        "t": "blob",
+                        "o": {
+                          "b": 418
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "icon",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "Icon.pdn",
+                        "t": "blob",
+                        "o": {
+                          "b": 110582
+                        }
+                      },
+                      {
+                        "n": "Icon.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 46626
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "notification-rocket.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 21571
+                  }
+                },
+                {
+                  "n": "rocket-black-small.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 3368
+                  }
+                },
+                {
+                  "n": "rocket-black.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 15172
+                  }
+                },
+                {
+                  "n": "rocket-white-small.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 5123
+                  }
+                },
+                {
+                  "n": "rocket-white.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 19889
+                  }
+                },
+                {
+                  "n": "rocket.svg",
+                  "t": "blob",
+                  "o": {
+                    "b": 1160
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "ideas.md",
+            "t": "blob",
+            "o": {
+              "b": 9
+            }
+          },
+          {
+            "n": "l10n.yaml",
+            "t": "blob",
+            "o": {
+              "b": 97
+            }
+          },
+          {
+            "n": "lib",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "apis",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "api_client.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 3902
+                        }
+                      },
+                      {
+                        "n": "error_details.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1069
+                        }
+                      },
+                      {
+                        "n": "launch_library",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "api.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 2314
+                              }
+                            },
+                            {
+                              "n": "events_response.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 8046
+                              }
+                            },
+                            {
+                              "n": "launch_response.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 39721
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "spaceflightnews",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "api.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 991
+                              }
+                            },
+                            {
+                              "n": "article_response.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 2023
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "background",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "handler.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 17772
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "l10n",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "app_en.arb",
+                        "t": "blob",
+                        "o": {
+                          "b": 5183
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "main.dart",
+                  "t": "blob",
+                  "o": {
+                    "b": 3174
+                  }
+                },
+                {
+                  "n": "mixins",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "attribution.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 3432
+                        }
+                      },
+                      {
+                        "n": "date_format.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 3785
+                        }
+                      },
+                      {
+                        "n": "link_copy.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 509
+                        }
+                      },
+                      {
+                        "n": "program_renderer.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1092
+                        }
+                      },
+                      {
+                        "n": "time_diff.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 817
+                        }
+                      },
+                      {
+                        "n": "update_renderer.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1165
+                        }
+                      },
+                      {
+                        "n": "url_launcher.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1083
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "notifications",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "create.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1543
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "pages",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "addons",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "launch_event_listing.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 11001
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "article_listing.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 5453
+                        }
+                      },
+                      {
+                        "n": "credits_page.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 3037
+                        }
+                      },
+                      {
+                        "n": "event_details.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 8828
+                        }
+                      },
+                      {
+                        "n": "home_page.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 7366
+                        }
+                      },
+                      {
+                        "n": "launch_details.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 19947
+                        }
+                      },
+                      {
+                        "n": "subscription_listing.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 2755
+                        }
+                      },
+                      {
+                        "n": "upcoming_events_listing.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1736
+                        }
+                      },
+                      {
+                        "n": "upcoming_launches_listing.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1763
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "widgets",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "addons",
+                        "t": "tree",
+                        "o": {
+                          "e": [
+                            {
+                              "n": "app_bar.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 937
+                              }
+                            },
+                            {
+                              "n": "launch_event.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 2581
+                              }
+                            },
+                            {
+                              "n": "launch_event_search.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 7233
+                              }
+                            },
+                            {
+                              "n": "overline_tab_indicator.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 3503
+                              }
+                            },
+                            {
+                              "n": "planet_loading_animation.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 600
+                              }
+                            },
+                            {
+                              "n": "sort.dart",
+                              "t": "blob",
+                              "o": {
+                                "b": 536
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "n": "article.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 6633
+                        }
+                      },
+                      {
+                        "n": "event.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 946
+                        }
+                      },
+                      {
+                        "n": "event_countdown.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 2662
+                        }
+                      },
+                      {
+                        "n": "image.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 2365
+                        }
+                      },
+                      {
+                        "n": "launch.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1027
+                        }
+                      },
+                      {
+                        "n": "launch_countdown.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 3841
+                        }
+                      },
+                      {
+                        "n": "ripple_link.dart",
+                        "t": "blob",
+                        "o": {
+                          "b": 1756
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "pubspec.lock",
+            "t": "blob",
+            "o": {
+              "b": 20720
+            }
+          },
+          {
+            "n": "pubspec.yaml",
+            "t": "blob",
+            "o": {
+              "b": 4239
+            }
+          },
+          {
+            "n": "test",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "attribution_test.dart",
+                  "t": "blob",
+                  "o": {
+                    "b": 921
+                  }
+                },
+                {
+                  "n": "widget_test.dart",
+                  "t": "blob",
+                  "o": {
+                    "b": 372
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "n": "web",
+            "t": "tree",
+            "o": {
+              "e": [
+                {
+                  "n": "CNAME",
+                  "t": "blob",
+                  "o": {
+                    "b": 15
+                  }
+                },
+                {
+                  "n": "favicon.ico",
+                  "t": "blob",
+                  "o": {
+                    "b": 12918
+                  }
+                },
+                {
+                  "n": "favicon.png",
+                  "t": "blob",
+                  "o": {
+                    "b": 2965
+                  }
+                },
+                {
+                  "n": "icons",
+                  "t": "tree",
+                  "o": {
+                    "e": [
+                      {
+                        "n": "Icon-192.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 9904
+                        }
+                      },
+                      {
+                        "n": "Icon-512.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 27201
+                        }
+                      },
+                      {
+                        "n": "Icon-maskable-192.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 9904
+                        }
+                      },
+                      {
+                        "n": "Icon-maskable-512.png",
+                        "t": "blob",
+                        "o": {
+                          "b": 27201
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "n": "index.html",
+                  "t": "blob",
+                  "o": {
+                    "b": 4260
+                  }
+                },
+                {
+                  "n": "manifest.json",
+                  "t": "blob",
+                  "o": {
+                    "b": 976
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "description": "Rock It! is an Android app that helps you stay informed on all things space",
+      "licenseInfo": {
+        "spdxId": "MIT"
+      },
+      "releases": {
+        "nodes": [
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.5.0",
+            "description": "- Added a search page. You can now search launches and events easily.\r\n- The launch details page now shows more info on boosters and landings\r\n- Improve date display for things within the next week\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DWOtU",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.5.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.4.0",
+            "description": "- Added a new page that shows launches and events you're subscribed to\r\n- The planet spinner loading animation now looks a bit nicer \r\n- Only run background tasks if the network is available\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DTPJn",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.4.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.3.4",
+            "description": "Changes:\r\n- Make notifications actually open the respective page in the app\r\n- Display day names and times for days within the next week (instead of only the date)\r\n- Fix weird bouncing scroll when leaving the last detail view of a list\r\n- Load 50 launches / events at once (instead of 25), this makes it less likely to get limited by the server\r\n\r\n\r\nPlease note that launches you were subscribed to before this update might get wrong notifications (the ones that were already scheduled) at some point due to the notification logic being changed.",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DRxIV",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.3.4/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.3.3",
+            "description": "Remove German translation as mixing German UI with English data is kind of ugly\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DPbB_",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.3.3/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.3.2",
+            "description": "Changes:\r\n* Improve date format for negative countdown values\r\n* Article Cards: Improve news site overlay\r\n* Make article cards larger\r\n* Improve logic for launch/event update notifications\r\n* Improve date format for current year in launches/events listing\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DOH-d",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.3.2/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.3.1",
+            "description": "Changes:\r\n* Add a custom loading animation\r\n* Always show domain in article widgets\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DKXaT",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.3.1/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.3.0",
+            "description": "- Switching countdown modes now no longer requires tapping the text exactly, only the widget *with* the text\r\n- Make launch details page look a bit better\r\n- Allow images to be larger on event & launch details pages, looks better\r\n- Improve web experience: update icons, metadata & data fetching\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DJjAV",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.3.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.2.0",
+            "description": "Changes:\r\n* Redesign credits page\r\n* Add app download button to web version\r\n",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DIfRI",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.2.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.1.0",
+            "description": "Changes:\r\n* Copy links when holding long on all linking widgets\r\n* Improve loading of launches, events and articles\r\n* Add landscape mode for event/launch listing\r\n* Build the app for web, now available on [my website](https://rockit.010.one/#/)",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DHp-L",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.1.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v1.0.0",
+            "description": "This is finally the release of version 1.0 of the app. It now has all initially planned *basic* features and has undergone many design overhauls.\r\n\r\n**Features**\r\n\r\n- List upcoming launches and events (e.g. space station activity)\r\n- Show launch/event details and a countdown (including the date and time in your local timezone)\r\n- List latest space news articles\r\n- Subscribe to launches or events to receive notifications before the start or when times are updated\r\n- Localization for English and German (UI only, data is in English)\r\n- No internet? No problem! The app caches offline content for a few days and updates it when connected to the internet\r\n\r\nInstallation can be done as described in the README of the project.",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DCsV_",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v1.0.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.8.0",
+            "description": "- **Subscribe to events to receive notifications**\r\n- **Render program info (e.g. the Starship program) in launch & event details**\r\n- Generally a lot of improvements for date formats (also respect 24h date format setting)\r\n- Dates are now shown in a more friendly manner (e.g. \"Today, 12:30\" etc)\r\n- Improved error handling (you can now retry everything that could fail)\r\n- Improved notification scheduling",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DB8s0",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.8.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.7.1",
+            "description": "* Add ripple effect to article cards \r\n* Custom, colored app bar that looks better\r\n* Efficiency improvements in page layout rebuilding\r\n* More bouncing effects\r\n* Launch/Event images now fill up the entire area they are allowed to",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4DBFDE",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.7.1/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.6.0",
+            "description": "* Render updates for events\r\n* Improve date formats by including the week day where it makes sense\r\n\r\nSee #2 ",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C9601",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.6.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.5.0",
+            "description": "You can now subscribe to a launch to receive notifications before liftoff.",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C7QLd",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.5.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.4.0",
+            "description": "* **New**: event listing & details view\r\n* Vast improvements to basically everything, more animations etc.",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C3qjG",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.4.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.3.0",
+            "description": "* Swipe through launches after opening one\r\n* Show launch info updates (e.g. liftoff, updates on the status etc.)",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C1e0q",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.3.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.2.1",
+            "description": "The app now uses previously downloaded responses in case something doesn't work while downloading the latest updates.",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C1Ev8",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.2.1/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.2.0",
+            "description": "In case the API rate-limits you, you can still see the previous response",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C0rNl",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.2.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.1.0",
+            "description": "The design is now a bit better",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C0o__",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.1.0/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          },
+          {
+            "isPrerelease": false,
+            "isDraft": false,
+            "tagName": "v0.0.1",
+            "description": "This initial release contains the very basic app. \r\nIt displays upcoming launches and space news.",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "id": "RA_kwDOGPKeFc4C0kIU",
+                  "name": "app-release.apk",
+                  "downloadUrl": "https://github.com/xarantolus/rockit/releases/download/v0.0.1/app-release.apk",
+                  "contentType": "application/vnd.android.package-archive"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
