@@ -41,6 +41,7 @@ jobs:
         run: |
           python3 -m venv fdroidserver-env
           .\fdroidserver-env\Scripts\Activate.ps1
+          pip install androguard
           pip install git+https://gitlab.com/fdroid/fdroidserver.git
 
         #mkdir fdroid\repo -ErrorAction SilentlyContinue
