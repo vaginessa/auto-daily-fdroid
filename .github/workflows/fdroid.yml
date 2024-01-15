@@ -102,6 +102,10 @@ jobs:
           repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/${{ env.FDROID_REPO_BRANCH }}/repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
 
+      - name: Install modules for metascoop-ts
+        run: pnpm install
+        working-directory: ${{ env.PROJECT_LOCATION }}/metascoop-ts
+
       - name: Run metascoop-ts
         run: pnpx tsx ${{ env.PROJECT_LOCATION }}/metascoop-ts/src/index.ts
         working-directory: ${{ env.PROJECT_LOCATION }}
