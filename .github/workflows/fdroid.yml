@@ -56,9 +56,13 @@ jobs:
         with:
           node-version: '20'
 
-      - uses: pnpm/action-setup@v2
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8
+
+      - name: Install tsx globally
+        run: pnpm global add tsx
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
@@ -90,9 +94,10 @@ jobs:
         shell: pwsh
         run: Copy-Item -Path . -Destination $env:PROJECT_LOCATION -Recurse
 
-      - run: |
+      - name: Add templated secrets to config.yml
+        run: |
           pnpm install
-          pnpx tsx deyaml.ts
+          tsx deyaml.ts
         working-directory: ${{ env.PROJECT_LOCATION }}/jshelpers
         env:
           keystorepass: ${{ secrets.keystorepass }}
@@ -102,12 +107,16 @@ jobs:
           repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/${{ env.FDROID_REPO_BRANCH }}/repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
 
+      - name: Install modules for project
+        run: pnpm install
+        working-directory: ${{ env.PROJECT_LOCATION }}
+
       - name: Install modules for metascoop-ts
         run: pnpm install
         working-directory: ${{ env.PROJECT_LOCATION }}/metascoop-ts
 
       - name: Run metascoop-ts
-        run: pnpx tsx ${{ env.PROJECT_LOCATION }}/metascoop-ts/src/index.ts
+        run: tsx ${{ env.PROJECT_LOCATION }}/metascoop-ts/src/index.ts
         working-directory: ${{ env.PROJECT_LOCATION }}
         env:
           GH_ACCESS_TOKEN: ${{ github.token }}
