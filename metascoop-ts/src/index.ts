@@ -367,7 +367,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 		console.log(`Running "fdroid update --pretty --create-metadata --delete-unknown" in ${repoDirectory}`);
 
         const code = await exec('fdroid', ['update', '--pretty', '--create-metadata', '--delete-unknown'], {
-            cwd: repoDirectory
+            cwd: path.dirname(repoDirectory)
         });
 
 		if (code != 0) {
@@ -526,7 +526,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 		console.log(`Running "fdroid update --pretty --delete-unknown" in ${repoDirectory}`);
 
         const code = await exec('fdroid', ['update', '--pretty', '--delete-unknown'], {
-            cwd: repoDirectory
+            cwd: path.dirname(repoDirectory)
         });
 
 		if (code != 0) {
