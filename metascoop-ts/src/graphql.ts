@@ -7,6 +7,7 @@ export interface Data {
 }
 
 export interface Repository {
+    defaultBranchRef: { name: string };
     files:       Files;
     description: string;
     licenseInfo: LicenseInfo;
@@ -43,10 +44,10 @@ export interface LicenseInfo {
 }
 
 export interface Releases {
-    nodes: ReleasesNode[];
+    nodes: Release[];
 }
 
-export interface ReleasesNode {
+export interface Release {
     isPrerelease:  boolean;
     isDraft:       boolean;
     tagName:       string;
@@ -55,10 +56,10 @@ export interface ReleasesNode {
 }
 
 export interface ReleaseAssets {
-    nodes: ReleaseAssetsNode[];
+    nodes: ReleaseAsset[];
 }
 
-export interface ReleaseAssetsNode {
+export interface ReleaseAsset {
     id:          string;
     name:        string;
     downloadUrl: string;

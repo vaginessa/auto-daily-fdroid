@@ -8,7 +8,7 @@ import { components } from '@octokit/openapi-types';
 import { IndexV1 } from "./repo-index-types";
 import { FDroidDataMetadata2 } from "./metadata-types";
 import { parse, compare } from 'semver';
-import { GraphqlResult } from "./graphql";
+import { Entry, Files, GraphqlResult, Release, ReleaseAsset } from "./graphql";
 
 interface AppInfo {
     git: string;
@@ -23,8 +23,8 @@ interface AppInfo {
     License?: string;
     keyName?: string;
 
-
-    fileList?: string[];
+    defaultBranchName: string;
+    fileList: string[];
 }
 
 const octokit = new Octokit({
@@ -181,6 +181,54 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
 	await fsxt.writeFile(path, dumpYaml(data));
 }
 
+//const (
+//	tableStart = "<!-- This table is auto-generated. Do not edit -->"
+//
+//	tableEnd = "<!-- end apps table -->"
+//
+//	tableTmpl = `
+//| Icon | Name | Description | Version |
+//| --- | --- | --- | --- |{{range .Apps}}
+//| <a href="{{.sourceCode}}"><img src="fdroid/repo/icons/{{.icon}}" alt="{{.name}} icon" width="36px" height="36px"></a> | [**{{.name}}**]({{.sourceCode}}) | {{.summary}} | {{.suggestedVersionName}} ({{.suggestedVersionCode}}) |{{end}}
+//` + tableEnd
+//)
+//
+//var tmpl = template.Must(template.New("").Parse(tableTmpl))
+//
+//function RegenerateReadme(readMePath: string, index: RepoIndex) {
+//	content, err := os.ReadFile(readMePath)
+//	if err != nil {
+//		return
+//	}
+//
+//	var tableStartIndex = bytes.Index(content, []byte(tableStart))
+//	if tableStartIndex < 0 {
+//		return fmt.Errorf("cannot find table start in %q", readMePath)
+//	}
+//
+//	var tableEndIndex = bytes.Index(content, []byte(tableEnd))
+//	if tableEndIndex < 0 {
+//		return fmt.Errorf("cannot find table end in %q", readMePath)
+//	}
+//
+//	var table bytes.Buffer
+//
+//	table.WriteString(tableStart)
+//
+//	err = tmpl.Execute(&table, index)
+//	if err != nil {
+//		return err
+//	}
+//
+//	newContent := []byte{}
+//
+//	newContent = append(newContent, content[:tableStartIndex]...)
+//	newContent = append(newContent, table.Bytes()...)
+//	newContent = append(newContent, content[tableEndIndex:]...)
+//
+//	return os.WriteFile(readMePath, newContent, os.ModePerm)
+//}
+
 (async () => {
     startGroup('Initializing');
     const appsList = loadYaml(await fsxt.readText(appsYmlPath)) as Record<string, AppInfo>;
@@ -204,30 +252,94 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
         }
 
         fragment doProcessing on Repository {
+            defaultBranchRef {
+              name
+            },
+            files:object(expression: "HEAD:") {
+              # Top-level.
+              ... on Tree {
+                e:entries {
+                  n:name
+                  t:type
+                  o:object {
+                    ... on Blob {
+                      b:byteSize
+                    }
+
+                    # One level down.
+                    ... on Tree {
+                      e:entries {
+                        n:name
+                        t:type
+                        o:object {
+
+                          # Two levels down.
+                          ... on Tree {
+                            e:entries {
+                              n:name
+                              t:type
+                              o:object {
+
+                                # Three levels down.
+                                ... on Tree {
+                                  e:entries {
+                                    n:name
+                                    t:type
+                                    o:object {
+                                      ... on Blob {
+                                        b:byteSize
+                                      }
+                                    }
+                                  }
+                                }
+                                ... on Blob {
+                                  b:byteSize
+                                }
+
+                              }
+                            }
+                          }
+                          ... on Blob {
+                            b:byteSize
+                          }
+
+                        }
+                      }
+                    }
+                    ... on Blob {
+                      b:byteSize
+                    }
+                  }
+                }
+              }
+            }
+
             description
             licenseInfo {
               spdxId
             }
-            releases(first: 100) {
-                nodes {
-                    isPrerelease
-                    isDraft
-                    tagName
-                    description
-                    releaseAssets(first: 100) {
-                        nodes {
-                            name
-                            downloadUrl
-                            contentType
-                        }
-                    }
+            releases(first:100) {
+              nodes {
+                isPrerelease
+                isDraft
+                tagName
+                description
+                releaseAssets(first: 100) {
+                  nodes {
+                    id
+                    name
+                    downloadUrl
+                    contentType
+                  }
                 }
+              }
             }
-        }
+          }
     `)
 
     let haveError = false;
     for (const [appidx, githubRepo] of Object.entries(grapqlResult.data)) {
+
         const app = appsListArray[Number(appidx.slice('res_'.length))];
         console.log(`App: ${app.author}/${app.name}`);
 
@@ -304,7 +416,7 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
 
                 // TODO timeout
 
-                const buf = await fetch(apks[i].downloadURL, {
+                const buf = await fetch(apks[i].downloadUrl, {
                     headers: {
                         Authorization: `Bearer ${process.env.GH_ACCESS_TOKEN}`,
                         'X-GitHub-Api-Version': '2022-11-28'
@@ -341,8 +453,8 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
             }()
         } */
 
-        app.fileList
-        githubRepo.files.e
+        app.defaultBranchName = githubRepo.defaultBranchRef.name;
+        app.fileList = flattenFiles(githubRepo.files);
     }
 
     const debugMode = false;
@@ -358,17 +470,17 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
         });
 
 		if (code != 0) {
-			error("Error while running \"fdroid update -c\":", code)
+			error("Error while running \"fdroid update -c\":" + code)
             process.exit(1);
 		}
 	}
+
+    const toRemovePaths: string[] = [];
 
     {
         using _ = group('Filling in metadata');
         // FDroidDataMetadata
         const fdroidIndex = await readIndex(fdroidIndexFilePath);
-
-        const toRemovePaths: string[] = [];
 
         const walkPath = path.join(repoDirectory, 'metadata');
         await fsxt.dive(walkPath, { recursive: true, directories: false, files: true, all: true }, async (file, stat) => {
@@ -485,97 +597,65 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
             //
 			//log.Printf("Found %d screenshots", len(metadata.Screenshots))
 
-			screenshotsPath := filepath.Join(walkPath, latestPackage.PackageName, "en-US", "phoneScreenshots")
+			const screenshotsPath = path.join(walkPath, latestPackage.packageName, "en-US", "phoneScreenshots")
 
-			_ = os.RemoveAll(screenshotsPath)
+			await fsxt.rm(screenshotsPath, { recursive: true, force: true });
 
-			var sccounter int = 1
-			for _, sc := range metadata.Screenshots {
-				var ext = filepath.Ext(sc)
-				if ext == "" {
-					log.Printf("Invalid: screenshot file extension is empty for %q", sc)
-					continue
-				}
+            await fsxt.mkdirp(screenshotsPath);
 
-				var newFilePath = filepath.Join(screenshotsPath, fmt.Sprintf("%d%s", sccounter, ext))
+            const screenshots = apkInfo.fileList.filter(e => e.includes('screenshot') && (e.endsWith("png") || e.endsWith("jpg") || e.endsWith("jpeg")));
 
-				err = os.MkdirAll(filepath.Dir(newFilePath), os.ModePerm)
-				if err != nil {
-					log.Printf("Creating directory for screenshot file %q: %s", newFilePath, err.Error())
-					return nil
-				}
+            let sccounter = 1;
+            for (const screenshot of screenshots) {
+                const url = `${apkInfo.git.replace('github.com', 'raw.githubusercontent.com')}/${apkInfo.defaultBranchName}${screenshot}`;
 
-				err = file.Move(sc, newFilePath)
-				if err != nil {
-					log.Printf("Moving screenshot file %q to %q: %s", sc, newFilePath, err.Error())
-					return nil
-				}
+                console.log('Downloading and saving screenshot from', url);
 
-				log.Printf("Wrote screenshot to %s", newFilePath)
+                await fsxt.writeFile(path.join(screenshotsPath, '' + (sccounter++) + path.extname(screenshot)), new DataView(await fetch(url).then(e => e.arrayBuffer())));
+            }
 
-				sccounter++
-			}
-
-			toRemovePaths = append(toRemovePaths, screenshotsPath)
-
-			return nil
+            toRemovePaths.push(screenshotsPath);
         });
     }
 
-    /*
-		}()
-	})
-	if err != nil {
-		log.Printf("Error while walking metadata: %s", err.Error())
+	if (!debugMode) {
+        using _ = group('F-Droid: Reading updated metadata')
+		// Now, we run the fdroid update command
 
-		os.Exit(1)
-	}
+		console.log(`Running "fdroid update --pretty --delete-unknown" in ${repoDirectory}`);
 
-	if !*debugMode {
-		fmt.Println("::group::F-Droid: Reading updated metadata")
+        const code = await exec('fdroid', ['update', '--pretty', '--delete-unknown'], {
+            cwd: repoDirectory
+        });
 
-		// Now, we run the fdroid update command again to regenerate the index with our new metadata
-		cmd := exec.Command("fdroid", "update", "--pretty", "--delete-unknown")
-		cmd.Stderr = os.Stderr
-		cmd.Stdout = os.Stdout
-		cmd.Stdin = os.Stdin
-		cmd.Dir = filepath.Dir(*repoDir)
-
-		log.Printf("Running %q in %s", cmd.String(), cmd.Dir)
-
-		err = cmd.Run()
-		if err != nil {
-			log.Println("Error while running \"fdroid update -c\":", err.Error())
-
-			fmt.Println("::endgroup::")
-			os.Exit(1)
-		}
-		fmt.Println("::endgroup::")
-	}
-
-	fmt.Println("::group::Assessing changes")
-
-	// Now at the end, we read the index again
-	fdroidIndex, err = apps.ReadIndex(fdroidIndexFilePath)
-	if err != nil {
-		log.Fatalf("reading f-droid repo index: %s\n::endgroup::\n", err.Error())
-	}
-
-	// Now we can remove all paths that were marked for doing so
-
-	for _, rmpath := range toRemovePaths {
-		err = os.RemoveAll(rmpath)
-		if err != nil {
-			log.Fatalf("removing path %q: %s\n", rmpath, err.Error())
+		if (code != 0) {
+			error("Error while running \"fdroid update --pretty', '--delete-unknown\":" + code)
+            process.exit(1);
 		}
 	}
 
-	// We can now generate the README file
-	readmePath := filepath.Join(filepath.Dir(filepath.Dir(*repoDir)), "README.md")
-	err = md.RegenerateReadme(readmePath, fdroidIndex)
-	if err != nil {
-		log.Fatalf("error generating %q: %s\n", readmePath, err.Error())
-	}
+    {
+        using _ = group('Assessing changes');
+
+	    // Now at the end, we read the index again
+        const fdroidIndex = await readIndex(fdroidIndexFilePath);
+
+        // Now we can remove all paths that were marked for doing so
+
+        for (const path of toRemovePaths) {
+            await fsxt.rm(path, { force: true, recursive: true });
+        }
+
+        // We can now generate the README file
+        const readmePath = path.join(path.dirname(path.dirname(repoDirectory)), "README.md")
+
+        // TODO: not implemented yet
+        //err = md.RegenerateReadme(readmePath, fdroidIndex)
+        //if err != nil {
+        //    log.Fatalf("error generating %q: %s\n", readmePath, err.Error())
+        //}
+    }
+
 
 	//if haveOldIndex {
 	//		cpath, haveSignificantChanges := apps.HasSignificantChanges(initialFdroidIndex, fdroidIndex)
@@ -624,17 +704,32 @@ async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
 	//		}
 	//}
 
-	fmt.Println("::endgroup::")
+	//fmt.Println("::endgroup::")
 
-	// If we have an error, we report it as such
-	if haveError {
-		os.Exit(1)
-	}
+	//// If we have an error, we report it as such
+	//if haveError {
+    //  os.Exit(1)
+	//}
 
 	//// If we don't have any good changes, we report it with exit code 2
 	//if !haveSignificantChanges {
 	//	os.Exit(2)
 	//}
 
-	// If we have relevant changes, we exit with code 0 */
+	// If we have relevant changes, we exit with code 0
 })();
+
+function flattenFiles(files: Files): string[] {
+    function* flattenFilesInner(entries: Entry[], basePath: string = ''): Generator<string> {
+        for (const entry of entries) {
+            if (entry.t == 'blob') {
+                yield `${basePath}/${entry.n}`;
+            } else {
+                yield* flattenFilesInner(entry.o.e!, `${basePath}/${entry.n}`);
+            }
+        }
+    }
+
+    return [...flattenFilesInner(files.e)];
+}
+
