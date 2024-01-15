@@ -234,104 +234,9 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
     endGroup();
 
-    const splitGitRe = /^https:\/\/github\.com\/(.*?)\/(.*?)$/i
-
     const apkInfoMap: Record<string, AppInfo> = {};
 
-    const grapqlResult = await octokit.graphql<GraphqlResult>(`
-        query {
-            ${appsListArray.map((app, i) => {
-                const split = app.git.match(splitGitRe);
-                if (split === null) throw new Error('No split!! ' + app.git);
-                return `res_${i}: repository(owner:${JSON.stringify(split[1])}, name:${JSON.stringify(split[2])}, followRenames: true) { ...doProcessing }`
-            }).join('\n')}
-        }
-
-        fragment doProcessing on Repository {
-            defaultBranchRef {
-              name
-            },
-            files:object(expression: "HEAD:") {
-              # Top-level.
-              ... on Tree {
-                e:entries {
-                  n:name
-                  t:type
-                  o:object {
-                    ... on Blob {
-                      b:byteSize
-                    }
-
-                    # One level down.
-                    ... on Tree {
-                      e:entries {
-                        n:name
-                        t:type
-                        o:object {
-
-                          # Two levels down.
-                          ... on Tree {
-                            e:entries {
-                              n:name
-                              t:type
-                              o:object {
-
-                                # Three levels down.
-                                ... on Tree {
-                                  e:entries {
-                                    n:name
-                                    t:type
-                                    o:object {
-                                      ... on Blob {
-                                        b:byteSize
-                                      }
-                                    }
-                                  }
-                                }
-                                ... on Blob {
-                                  b:byteSize
-                                }
-
-                              }
-                            }
-                          }
-                          ... on Blob {
-                            b:byteSize
-                          }
-
-                        }
-                      }
-                    }
-                    ... on Blob {
-                      b:byteSize
-                    }
-                  }
-                }
-              }
-            }
-
-            description
-            licenseInfo {
-              spdxId
-            }
-            releases(first:100) {
-              nodes {
-                isPrerelease
-                isDraft
-                tagName
-                description
-                releaseAssets(first: 100) {
-                  nodes {
-                    id
-                    name
-                    downloadUrl
-                    contentType
-                  }
-                }
-              }
-            }
-          }
-    `)
+    const grapqlResult = await doQueries(appsListArray);
 
     let haveError = false;
     for (const [appidx, githubRepo] of Object.entries(grapqlResult.data)) {
@@ -723,5 +628,114 @@ function flattenFiles(files: Files): string[] {
     }
 
     return [...flattenFilesInner(files.e)];
+}
+
+async function doQueries(appsListArray: AppInfo[]) {
+    const splitGitRe = /^https:\/\/github\.com\/(.*?)\/(.*?)$/i
+
+    const result: GraphqlResult = { data: { } };
+
+    for (let i = 0; i < appsListArray.length; i += 4) {
+        const slice = appsListArray.slice(i, Math.min(i + 4, appsListArray.length));
+
+        const queried = await octokit.graphql<GraphqlResult>(`
+            query {
+                ${slice.map((app, i) => {
+                    const split = app.git.match(splitGitRe);
+                    if (split === null) throw new Error('No split!! ' + app.git);
+                    return `res_${i}: repository(owner:${JSON.stringify(split[1])}, name:${JSON.stringify(split[2])}, followRenames: true) { ...doProcessing }`
+                }).join('\n')}
+            }
+
+            fragment doProcessing on Repository {
+                defaultBranchRef {
+                    name
+                },
+                files:object(expression: "HEAD:") {
+                    # Top-level.
+                    ... on Tree {
+                        e:entries {
+                            n:name
+                            t:type
+                            o:object {
+                                ... on Blob {
+                                    b:byteSize
+                                }
+
+                                # One level down.
+                                ... on Tree {
+                                    e:entries {
+                                        n:name
+                                        t:type
+                                        o:object {
+
+                                        # Two levels down.
+                                        ... on Tree {
+                                                e:entries {
+                                                n:name
+                                                t:type
+                                                o:object {
+
+                                                    # Three levels down.
+                                                    ... on Tree {
+                                                        e:entries {
+                                                            n:name
+                                                            t:type
+                                                            o:object {
+                                                                ... on Blob {
+                                                                    b:byteSize
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    ... on Blob {
+                                                        b:byteSize
+                                                    }
+
+                                                }
+                                            }
+                                        }
+                                        ... on Blob {
+                                            b:byteSize
+                                        }
+
+                                        }
+                                    }
+                                }
+                                ... on Blob {
+                                    b:byteSize
+                                }
+                            }
+                        }
+                    }
+                }
+
+                description
+                licenseInfo {
+                    spdxId
+                }
+                releases(first:100) {
+                    nodes {
+                        isPrerelease
+                        isDraft
+                        tagName
+                        description
+                        releaseAssets(first: 100) {
+                            nodes {
+                                id
+                                name
+                                downloadUrl
+                                contentType
+                            }
+                        }
+                    }
+                }
+            }
+        `);
+
+        Object.assign(result.data, queried.data);
+    }
+
+    return result;
 }
 
