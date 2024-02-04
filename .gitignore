@@ -21,3 +21,4 @@ io.github.xarantolus.*
 node_modules
 /setvars.cmd
 /metascoop-ts/dist
+/test.json
