@@ -1,0 +1,15 @@
+changes:
+- fix bug with mangaupdates score
+- fix dot separator between scanlator and progress
+
+---
+
+### Checksums
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | 002e3ccef78e561d9025451b67808fd48e14a06e4412ecc9fb8d16ef07946c03
+| arm64-v8a | 5a9f4c30a2f02420f3aea79288d0e19c4d23a8755b629e0610aee12a98e4d274
+| armeabi-v7a | 94734eca2f298d7447a076e49fcbfe64641b8a3db42f04b570f2c5e65b96e5d4
+| x86 | 6230aeb9f7fdd2311a7dba2d32bea09c2ce08c14ed12537edb802c957c418b1a
+| x86_64 | 4edeacad8976be5e8319eca9021bc4968abfbf941487ca211a54a8430ee90c22 |

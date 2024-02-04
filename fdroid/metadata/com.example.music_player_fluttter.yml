@@ -1,11 +1,11 @@
-AuthorName: vellt
+AuthorName: ''
 Categories:
-    - Multimedia
-CurrentVersion: 1.0.0
+  - Multimedia
 CurrentVersionCode: 1
-IssueTracker: https://github.com/vellt/GetX-Stream-Music-Player-Flutter/issues
-License: MIT
+IssueTracker: ''
 Name: Stream Music Player with GetX
 SourceCode: https://github.com/vellt/GetX-Stream-Music-Player-Flutter
 Summary: Listen to music online with a clean GetX MVC architecture
-WebSite: ""
+WebSite: ''
+License: MIT
+CurrentVersion: 1.0.0

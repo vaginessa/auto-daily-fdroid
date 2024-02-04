@@ -1,0 +1,26 @@
+## 🥳 New
+- Filter scanlators in library unread/read count (@Jays2Kings)
+## 🏗️ Changes
+- Revert "Always save pages/covers in subfolders" 
+
+## 🐜 Fixes
+- Fix MAL recommendations not working since Sept 2022.. LMAO 
+- Migrate removed Serbian Language 
+- more db fixes to crashes when exiting reader (@Jays2Kings)
+## 🛠️ Other
+- update minimum webview to 114 
+- Update coil.version to v2.5.0 (#1589) (@renovate[bot])
+- Update dependency com.google.firebase:firebase-analytics-ktx to v21.5.0 (#1588) (@renovate[bot])
+- Update aboutlib.version to v10.9.2 (#1594) (@renovate[bot])
+- Update dependency io.kotest:kotest-assertions-core-jvm to v5.8.0 (#1593) (@renovate[bot])
+- Update dependency com.android.tools:desugar_jdk_libs to v2.0.4 (#1591) (@renovate[bot])
+- Update dependency com.google.firebase:firebase-crashlytics-ktx to v18.5.1 (#1581) (@renovate[bot])
+- Update dependency com.mikepenz:multiplatform-markdown-renderer-android to v0.9.0 (#1598) (@renovate[bot])
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | 15fface1474561ec295e94b902d93a36676e06d90ed3247f3da2dfdd64393d31
+| arm64-v8a | 22ddc40072a214b5b8c01b15a073226055bb3fc8d456e735c175ff1d3ef74abe
+| armeabi-v7a | 2a970100654d52e15f5daa4588864f82ac433216888978cece1d157c04942f5c
+| x86 | d552ecb4c3342011013260a69376cfc28197d2eb9d6b623dac11ea5513ec9ead
+| x86_64 | 516a99697a01fe37dea24fb34aadff83bb8b488338e632ceb5c9790f2e8b7861

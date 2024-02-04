@@ -1,1 +1,0 @@
-The app now *always* correctly switches the appbar color when switching between light and dark mode

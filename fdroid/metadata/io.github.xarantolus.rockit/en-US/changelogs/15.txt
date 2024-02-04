@@ -1,3 +1,0 @@
-Changes:
-* Redesign credits page
-* Add app download button to web version

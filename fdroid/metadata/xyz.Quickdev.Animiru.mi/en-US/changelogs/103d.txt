@@ -1,0 +1,31 @@
+### Changes
+
+- Fixed snackbar padding with Nav pill
+- Fixed French downloading string
+
+Navigation Bar option will be added in the next update
+
+#### **Full Changelog**: https://github.com/Quickdesh/Animiru/compare/v0.15.2.2...v0.15.2.3
+---
+
+### Checksums
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| arm64-v8a | 1f7e9fc7a070cc1bb28640fc8cf809f9c26fad95c10e8a9af585bd6abe678cc8 |
+| armeabi-v7a | 327620cb7fbae2a359bf3a4c744e6a2f90f36d7ea5821898656b1c375f61329e |
+| universal | 71129263a5c3527057037177d3c858e3b282f6d9aff3322754f83307c71d7517 |
+| x86 | 6ac439a80c900c1637acd3c8f934909426a3f41eb59aaed340b75045780cecb2 |
+| x86_64 | 44f9b349755ddf0745ba34e97da4f694277df86da971be491d4aee68753091b0 |
+
+To find out the best version for you:-
+
+https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw
+
+Download the app from the link above ^
+
+Open app ---> SOC tab ---> ABI/Supported ABI
+
+Install based on the values given in the above variant fields
+
+Universal will work regardless of the ABI

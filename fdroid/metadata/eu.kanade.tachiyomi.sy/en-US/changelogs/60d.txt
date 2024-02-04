@@ -1,0 +1,46 @@
+## General
+* Based on Tachiyomi stable [0.15.2](https://github.com/tachiyomiorg/tachiyomi/releases/tag/v0.15.2)(from 0.14.7)
+
+## MangaDex
+- Use ReadableAt for dates, fixes MangaPlus dates
+- Fix Recommendations when Delegation is off (Thanks @Riztard)
+
+## E-H/Exh
+- Add Icon for Exh
+- Fix page Previews crash
+- Improve favourites sync library gallery resolver
+- Add exceeded page quota error
+- Update EhTags
+
+## Reader
+- Center the Exh Utils(Thanks @Koranir)
+- Fix double pages not showing in default reading mode
+- Shorter chapter list in reader(Thanks @Riztard)
+
+## Migration
+- Fix pre-migration resetting order
+
+## Downloads/Local/Database
+- Add encrypted database(Thanks @Shamicen)
+- Add encrypted local covers(Thanks @Shamicen)
+- Add encrypted cbz archives(Thanks @Shamicen)
+
+## Translations
+- Traditional Chinese(Thanks @NeKoOuO and @plum7x)
+- Simplified Chinese(Thanks @Howard20181)
+- Russian(Thanks @Dexroneum)
+
+## Other
+- So much other stuff that I give up, I'm just going to make the release
+
+---
+
+### Checksums
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | 161db6cb2e16bd2fac159073ae983a30f07f29f879bfeabda6977a05b6338216 |
+| arm64-v8a | 29bb83496631b96f195df69bf31d5c2f8dbe7a6a5ac92312615ab6a74371ad6b |
+| armeabi-v7a | dbf589b98acfd12ef2663d824aede6fefe1d3636e20df3f5bcf7fd1899c19b28 |
+| x86 | de617c8e14abfde7421ba8db18e7d6af251a3f7ad49720c415c787e2aaeb633f |
+| x86_64 | fdd053ae2681121626d3d87add21546cb1ee9d97ab53214d0fee399017a68ea0 |

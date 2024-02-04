@@ -1,0 +1,8 @@
+- Predictive back animations for Android 14
+- Now uses Web Scrobbler's rules to parse YouTube titles
+- Edits are now applied to YouTube metadata BEFORE parsing the title
+- If an edit is found, the internal YouTube title parser will not be used
+- Bug fixes
+- Lithuanian, Korean and Finnish added by the translators on Crowdin
+
+Copied from Play Store what's new, may not be accurate for minor updates.

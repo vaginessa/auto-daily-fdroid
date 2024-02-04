@@ -1,2 +1,0 @@
-* **New**: event listing & details view
-* Vast improvements to basically everything, more animations etc.

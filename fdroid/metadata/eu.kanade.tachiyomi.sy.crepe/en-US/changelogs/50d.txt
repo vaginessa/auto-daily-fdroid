@@ -1,0 +1,9 @@
+**Takoyomi v3.2.5**
+
+**Changes:**
+- Added MangaUpdates tracker
+- Rearrange source browse filter sheet buttons
+- Use lowercased phrases for "search" screen titles
+- Made backdrop cover slightly more visible
+- Update MangaDex source filter buttons
+- General updates to sheet headers styling

@@ -1,0 +1,7 @@
+- Fixed URLs not opening from About window
+- Rounded Edges of the corner 4 buttons of the main grid
+- About Window changes
+  - Added Platform name to About window
+  - Removed package name from About window
+  - Removed build number from About window
+- Signed APK

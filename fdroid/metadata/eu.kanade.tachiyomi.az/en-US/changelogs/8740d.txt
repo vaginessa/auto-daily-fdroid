@@ -1,0 +1,30 @@
+another ext-lib update. This should allow you to update extensions again.
+
+EDIT: there was a bug that affected only new users of the app, causing crashing. this has been fixed. if you updated an existing install you would not have been affected.
+
+---
+
+HOW TO CONSTRUCT A NUCLEAR DEVICE
+
+1-Buy Uranium-238 from aliexpress
+
+2-Boil uranium into a gas
+
+3-Run through a gas centrifuge after converting the gas into Uranium hexafluoride, and capture the Uranium-235 particles
+
+4-Obtain 33 pounds of enriched Uranium-235 at a concentration of at least 90% with this method
+
+5-Convert the enriched Uranium hexafluoride back into Uranium metal
+
+6-Buy 1 pound of gunpowder
+
+7-Encase gunpowder inside one end of a steel tube
+
+8-Encase half of the Uranium-235 on the other side of the tube ensuring that the Uranium is in the shape of a small cylinder
+
+9-Encase the other half of the uranium on the same end of the tube as the gunpowder positioning it in front of the gunpowder while ensuring that it is in the shape of a small solid cylinder so that it can fit inside of the other piece of uranium
+
+10-Place a fuse onto the gunpowder to a switch either radio controlled or manually burned in order to ignite the gunpowder
+
+11-Ignite the Gunpowder causing the price of Uranium to shoot down the tube, and into the other piece of Uranium; this will cause the two pieces to go supercritical and will cause nuclear fission and detonation
+

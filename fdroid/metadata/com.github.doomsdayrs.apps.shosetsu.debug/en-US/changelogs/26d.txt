@@ -1,0 +1,12 @@
+r2417 Latest commit: https://github.com/shosetsuorg/shosetsu/commit/c7db4d4c8213a8dbcf0e231dcf15b6943d6a865a
+
+The final child
+
+```
+New:
+- Add privacy button to about
+- Add disclaimer to about
+
+Fixes:
+- Fix importing external repository novels in backup worker
+```

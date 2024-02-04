@@ -1,2 +1,0 @@
-* Swipe through launches after opening one
-* Show launch info updates (e.g. liftoff, updates on the status etc.)

@@ -1,2 +1,0 @@
-* Better scroll effect
-* Improve dark mode app bar color

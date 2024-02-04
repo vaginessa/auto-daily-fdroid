@@ -1,1 +1,0 @@
-Remove German translation as mixing German UI with English data is kind of ugly
