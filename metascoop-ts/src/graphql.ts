@@ -10,7 +10,7 @@ export interface Repository {
     defaultBranchRef: { name: string };
     files:       Files;
     description: string;
-    licenseInfo: LicenseInfo;
+    licenseInfo?: LicenseInfo;
     releases:    Releases;
 }
 

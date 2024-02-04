@@ -1,3 +1,5 @@
+import 'source-map-support/register';
+
 import { Octokit } from "octokit";
 import { startGroup, endGroup, error } from '@actions/core';
 import { exec } from '@actions/exec';
@@ -11,21 +13,69 @@ import { parse, compare } from 'semver';
 import { Entry, Files, GraphqlResult, Release, ReleaseAsset } from "./graphql";
 import Handlebars from 'handlebars';
 
+// https://stackoverflow.com/questions/6832596/how-can-i-compare-software-version-number-using-javascript-only-numbers
+function versionCompare(v1: string, v2: string, options?: { lexicographical?: boolean, zeroExtend?: boolean }) {
+    let lexicographical = options && options.lexicographical;
+    let zeroExtend = options && options.zeroExtend;
+    let v1parts: number[] | string[] = v1.split('.');
+    let v2parts: number[] | string[] = v2.split('.');
+
+    function isValidPart(x: string) {
+        return (lexicographical ? /^\d+[A-Za-z]*$/ : /^\d+$/).test(x);
+    }
+
+    if (!v1parts.every(isValidPart) || !v2parts.every(isValidPart)) {
+        return NaN;
+    }
+
+    if (zeroExtend) {
+        while (v1parts.length < v2parts.length) v1parts.push("0");
+        while (v2parts.length < v1parts.length) v2parts.push("0");
+    }
+
+    if (!lexicographical) {
+        v1parts = v1parts.map(Number);
+        v2parts = v2parts.map(Number);
+    }
+
+    for (var i = 0; i < v1parts.length; ++i) {
+        if (v2parts.length == i) {
+            return 1;
+        }
+
+        if (v1parts[i] == v2parts[i]) {
+            continue;
+        }
+        else if (v1parts[i] > v2parts[i]) {
+            return 1;
+        }
+        else {
+            return -1;
+        }
+    }
+
+    if (v1parts.length != v2parts.length) {
+        return -1;
+    }
+
+    return 0;
+}
+
 interface AppInfo {
     git: string;
-    summary: string;
-    author: string;
+    summary?: string;
+    author?: string;
     repoAuthor?: string;
     name: string;
     description: string;
-    categories: string[];
-    anti_features: string[];
+    categories?: string[];
+    anti_features?: string[];
     ReleaseDescription?: string;
     License?: string;
     keyName?: string;
 
     defaultBranchName: string;
-    fileList: string[];
+    fileList?: string[];
 }
 
 const octokit = new Octokit({
@@ -171,7 +221,15 @@ function findLatestPackage(repo: IndexV1, pkgName: string) {
             return a.versionCode - b.versionCode;
         }
 
-        return compare(a.versionName, b.versionName);
+        try {
+            return compare(a.versionName, b.versionName, { loose: true });
+        } catch (err) {
+            try {
+                return versionCompare(a.versionName, b.versionName);
+            } catch (err2) {
+                return a.versionName > b.versionName ? 1 : a.versionName == b.versionName ? -1 : 0;
+            }
+        }
     });
 
 	// Return the one with the latest version
@@ -189,7 +247,7 @@ const
 
 	tableTmpl = `
 | Icon | Name | Description | Version |
-| --- | --- | --- | --- |{{#each Apps}}
+| --- | --- | --- | --- |{{#each apps}}
 | <a href="{{sourceCode}}"><img src="fdroid/repo/icons/{{icon}}" alt="{{name}} icon" width="36px" height="36px"></a> | [**{{name}}**]({{sourceCode}}) | {{summary}} | {{suggestedVersionName}} ({{suggestedVersionCode}}) |{{/each}}
 ` + tableEnd;
 
@@ -212,7 +270,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
 	let newContent = '';
 
-	newContent += content.slice(0, tableStartIndex);
+	newContent += content.slice(0, tableStartIndex + tableStart.length);
 	newContent += result;
 	newContent += content.slice(tableEndIndex + tableEnd.length);
 
@@ -238,11 +296,15 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
     const grapqlResult = await doQueries(appsListArray);
 
+    await fsxt.writeJson('../test.json', grapqlResult, {spaces: 4});
+
+    console.log(grapqlResult);
+
     let haveError = false;
     for (const [appidx, githubRepo] of Object.entries(grapqlResult.data)) {
 
         const app = appsListArray[Number(appidx.slice('res_'.length))];
-        console.log(`App: ${app.author}/${app.name}`);
+        console.log(`App: ${app.name} by ${app.author ?? '???'}`);
 
         let repo: Repo;
 
@@ -268,8 +330,16 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
         console.log(`Received ${releases.length} releases`);
 
+        let foundApks = 0;
+        const apksThreshold = 3;
+
         top:
         for (const release of releases) {
+            if (foundApks >= apksThreshold) {
+                console.log(`Got ${apksThreshold} releases, but there are still ${releases.length - (releases.indexOf(release))} more`);
+                break;
+            }
+
             using _ = group(`Release ${release.tagName}`);
 
             if (release.isPrerelease) {
@@ -289,7 +359,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
             const apks = findApkRelease(release);
             if (apks.length == 0) {
                 console.log("Couldn't find a release asset with extension \".apk\"");
-                return;
+                continue; // return;
             }
 
             const appNames = apks.map((e, i) => [i, generateReleaseFilename(app.name, release.tagName, e)] as const);
@@ -310,6 +380,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
                 // If the app file already exists for this version, we continue
                 if (await fsxt.exists(appTargetPath)) {
                     console.log(`Already have APK for version ${release.tagName} at ${appTargetPath}`);
+                    foundApks++;
                     continue top;
                 }
 
@@ -328,6 +399,12 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
                 console.log(`Successfully downloaded app for version ${release.tagName} APK ${apks[i].name}`)
             }
+            foundApks++;
+        }
+
+        if (foundApks === 0) {
+            console.log("Couldn't find any release assets with extension \".apk\"");
+            return;
         }
 
         /*
@@ -364,7 +441,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
         using _ = group('F-Droid: Creating metadata stubs')
 		// Now, we run the fdroid update command
 
-		console.log(`Running "fdroid update --pretty --create-metadata --delete-unknown" in ${repoDirectory}`);
+		console.log(`Running "fdroid update --pretty --create-metadata --delete-unknown" in ${path.dirname(repoDirectory)}`);
 
         const code = await exec('fdroid', ['update', '--pretty', '--create-metadata', '--delete-unknown'], {
             cwd: path.dirname(repoDirectory)
@@ -383,19 +460,19 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
         // FDroidDataMetadata
         const fdroidIndex = await readIndex(fdroidIndexFilePath);
 
-        const walkPath = path.join(repoDirectory, 'metadata');
+        const walkPath = path.join(repoDirectory, '..', 'metadata');
         await fsxt.dive(walkPath, { recursive: true, directories: false, files: true, all: true }, async (file, stat) => {
-            if (!file.endsWith('.yml')) {
+            if (path.extname(file) != '.yml') {
                 return;
             }
 
-            const pkgname = file.replace(/.yml$/i, '');
+            let pkgname = path.basename(file, '.yml');
 
             using _ = group(pkgname);
 
             console.log(`Working on ${pkgname}`);
 
-            const meta = await readMetaFile(file);
+            const meta = await readMetaFile(file) ?? {};
 
 			const latestPackage = findLatestPackage(fdroidIndex, pkgname);
             if (!latestPackage) {
@@ -411,9 +488,11 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 				return;
 			}
 
+            console.log(apkInfo);
+
 			// Now update with some info
 
-            function setNonEmpty<K extends string>(m: { [key in K]?: string }, key: K, value: string) {
+            function setNonEmpty<K extends string>(m: { [key in K]?: string }, key: K, value?: string) {
                 if (value || m[key] == "Unknown") {
                     m[key] = value;
 
@@ -422,15 +501,15 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
             }
 
 			setNonEmpty(meta, "AuthorName", apkInfo.author);
-			setNonEmpty(meta, "Name", apkInfo.name ?? apkInfo.keyName!);
+			setNonEmpty(meta, "Name", apkInfo.name ?? apkInfo.keyName);
 			setNonEmpty(meta, "SourceCode", apkInfo.git);
-			setNonEmpty(meta, "License", apkInfo.License!);
-			setNonEmpty(meta, "Description", apkInfo.description!);
+			setNonEmpty(meta, "License", apkInfo.License);
+			setNonEmpty(meta, "Description", apkInfo.description);
 
-			var summary = apkInfo.summary;
+			var summary = apkInfo.summary ?? apkInfo.description;
 			// See https://f-droid.org/en/docs/Build_Metadata_Reference/#Summary for max length
 			const maxSummaryLength = 80
-			if (summary.length > maxSummaryLength) {
+			if (summary && summary.length > maxSummaryLength) {
 				summary = summary.slice(0, -3) + '...'
 
 				console.log(`Truncated summary to length of ${summary.length} (max length)`);
@@ -438,11 +517,11 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
 			setNonEmpty(meta, "Summary", summary);
 
-			if (apkInfo.categories.length > 0) {
+			if (apkInfo.categories && apkInfo.categories.length > 0) {
 				meta["Categories"] = apkInfo.categories as typeof meta["Categories"];
 			}
 
-			if (apkInfo.anti_features.length > 0) {
+			if (apkInfo.anti_features && apkInfo.anti_features.length > 0) {
 				meta["AntiFeatures"] = apkInfo.anti_features as typeof meta["AntiFeatures"]; //.join(',');
 			}
 
@@ -454,11 +533,11 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
             try {
 			    await writeMetaFile(file, meta);
             } catch (err) {
-				console.error(`Writing meta file ${path}:`, err);
+				console.error(`Writing meta file ${file}:`, err);
                 return;
             }
 
-			console.log(`Updated metadata file ${path}`);
+			console.log(`Updated metadata file ${file}`);
 
 			if (apkInfo.ReleaseDescription != "") {
 				const destFilePath = path.join(walkPath, latestPackage.packageName, "en-US", "changelogs", `${latestPackage.versionCode}d.txt`);
@@ -504,7 +583,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
             await fsxt.mkdirp(screenshotsPath);
 
-            const screenshots = apkInfo.fileList.filter(e => e.includes('screenshot') && (e.endsWith("png") || e.endsWith("jpg") || e.endsWith("jpeg")));
+            const screenshots = apkInfo.fileList?.filter(e => e.includes('screenshot') && (e.endsWith("png") || e.endsWith("jpg") || e.endsWith("jpeg"))) ?? [];
 
             let sccounter = 1;
             for (const screenshot of screenshots) {
@@ -523,7 +602,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
         using _ = group('F-Droid: Reading updated metadata')
 		// Now, we run the fdroid update command
 
-		console.log(`Running "fdroid update --pretty --delete-unknown" in ${repoDirectory}`);
+		console.log(`Running "fdroid update --pretty --delete-unknown" in ${path.dirname(repoDirectory)}`);
 
         const code = await exec('fdroid', ['update', '--pretty', '--delete-unknown'], {
             cwd: path.dirname(repoDirectory)
@@ -621,8 +700,15 @@ function flattenFiles(files: Files): string[] {
         for (const entry of entries) {
             if (entry.t == 'blob') {
                 yield `${basePath}/${entry.n}`;
+            } else if (entry.t == 'tree') {
+                if (entry.o.e) {
+                    yield* flattenFilesInner(entry.o.e, `${basePath}/${entry.n}`);
+                } else {
+                    // empty folder :)
+                    // console.error(`No entries for ${entry.t} ${basePath}/${entry.n}`)
+                }
             } else {
-                yield* flattenFilesInner(entry.o.e!, `${basePath}/${entry.n}`);
+                // t=commit for submodules
             }
         }
     }
@@ -635,15 +721,17 @@ async function doQueries(appsListArray: AppInfo[]) {
 
     const result: GraphqlResult = { data: { } };
 
-    for (let i = 0; i < appsListArray.length; i += 4) {
-        const slice = appsListArray.slice(i, Math.min(i + 4, appsListArray.length));
+    const sliceSize = 8;
 
-        const queried = await octokit.graphql<GraphqlResult>(`
+    for (let i = 0; i < appsListArray.length; i += sliceSize) {
+        const slice = appsListArray.slice(i, Math.min(i + sliceSize, appsListArray.length));
+
+        const queried = await octokit.graphql<GraphqlResult['data']>(`
             query {
-                ${slice.map((app, i) => {
+                ${slice.map((app, j) => {
                     const split = app.git.match(splitGitRe);
                     if (split === null) throw new Error('No split!! ' + app.git);
-                    return `res_${i}: repository(owner:${JSON.stringify(split[1])}, name:${JSON.stringify(split[2])}, followRenames: true) { ...doProcessing }`
+                    return `res_${i+j}: repository(owner:${JSON.stringify(split[1])}, name:${JSON.stringify(split[2])}, followRenames: true) { ...doProcessing }`
                 }).join('\n')}
             }
 
@@ -733,7 +821,9 @@ async function doQueries(appsListArray: AppInfo[]) {
             }
         `);
 
-        Object.assign(result.data, queried.data);
+        console.log(queried);
+
+        Object.assign(result.data, queried);
     }
 
     return result;
