@@ -500,8 +500,8 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
                 }
             }
 
-			setNonEmpty(meta, "AuthorName", apkInfo.author ?? apkInfo.repoAuthor);
-			setNonEmpty(meta, "Name", apkInfo.name ?? apkInfo.keyName);
+			setNonEmpty(meta, "AuthorName", apkInfo.author || apkInfo.repoAuthor);
+			setNonEmpty(meta, "Name", apkInfo.name || apkInfo.keyName);
 			setNonEmpty(meta, "SourceCode", apkInfo.git);
 			setNonEmpty(meta, "License", apkInfo.License);
 			setNonEmpty(meta, "Description", apkInfo.description);
