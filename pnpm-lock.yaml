@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   typescript:
-    specifier: 5.4.0-dev.20231114
-    version: 5.4.0-dev.20231114
+    specifier: 5.4.0-dev.20240126
+    version: 5.4.0-dev.20240126
 
 devDependencies:
   '@actions/exec':
@@ -17,8 +17,8 @@ devDependencies:
     specifier: 7.0.2
     version: 7.0.2
   '@octokit/openapi-types':
-    specifier: 19.0.2
-    version: 19.0.2
+    specifier: 19.1.0
+    version: 19.1.0
 
 packages:
 
@@ -50,8 +50,8 @@ packages:
       universal-user-agent: 6.0.1
     dev: true
 
-  /@octokit/openapi-types@19.0.2:
-    resolution: {integrity: sha512-8li32fUDUeml/ACRp/njCWTsk5t17cfTM1jp9n08pBrqs5cDFJubtjsSnuz56r5Tad6jdEPJld7LxNp9dNcyjQ==}
+  /@octokit/openapi-types@19.1.0:
+    resolution: {integrity: sha512-6G+ywGClliGQwRsjvqVYpklIfa7oRPA0vyhPQG/1Feh+B+wU0vGH1JiJ5T25d3g1JZYBHzR2qefLi9x8Gt+cpw==}
     dev: true
 
   /@octokit/request-error@5.0.1:
@@ -77,7 +77,7 @@ packages:
   /@octokit/types@12.3.0:
     resolution: {integrity: sha512-nJ8X2HRr234q3w/FcovDlA+ttUU4m1eJAourvfUUtwAWeqL8AsyRqfnLvVnYn3NFbUnsmzQCzLNdFerPwdmcDQ==}
     dependencies:
-      '@octokit/openapi-types': 19.0.2
+      '@octokit/openapi-types': 19.1.0
     dev: true
 
   /deprecation@2.3.1:
@@ -95,8 +95,8 @@ packages:
       wrappy: 1.0.2
     dev: true
 
-  /typescript@5.4.0-dev.20231114:
-    resolution: {integrity: sha512-z7rH8Vy4KWJyzNUaFt1HMzwYNRUmy2HMN98eufjvqbhmS3WPoQF89/UgonRmYf1vAP/69z0PytuV9hBMHNkaDg==}
+  /typescript@5.4.0-dev.20240126:
+    resolution: {integrity: sha512-rIWKkTB3e9TP5bXwW7NeixjfITOrZwFe7JvJbCPZsF3FFq1AASVkovR4fkBZBN+KKyPLZES4tPZRev2IOUB5Vg==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: false
