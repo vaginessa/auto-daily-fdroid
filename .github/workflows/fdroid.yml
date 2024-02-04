@@ -74,7 +74,7 @@ jobs:
 
       - name: Install F-Droid server software (Windows)
         if: runner.os == 'Windows'
-        run: pip install fdroidserver
+        run: pip install git+https://github.com/uwx/fdroidserver.git
 
       - name: Install F-Droid server software (Linux/macOS)
         if: runner.os != 'Windows'
