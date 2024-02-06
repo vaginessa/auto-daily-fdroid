@@ -163,16 +163,17 @@ jobs:
           (Get-ChildItem -Filter *.apk -Path "$env:PROJECT_LOCATION\fdroid\repo" -File -Recurse | Measure-Object).Count | Out-File "${{ github.workspace }}\.github\apk-count.json"
 
       - name: Push updated readme and apk-count.json if needed
+        shell: pwsh
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git config pull.rebase true
 
-          git add README.md .github\apk-count.json && \
-          git commit -m"Automated update README and APK count" && \
-          git add fdroid/metadata && \
-          git commit -m"Automated update cached repo metadata" && \
-          git pull && \
+          git add README.md .github\apk-count.json
+          git commit -m "Automated update README and APK count"
+          git add fdroid/metadata
+          git commit -m "Automated update cached repo metadata"
+          git pull
           git push
 
           exit 0
