@@ -103,7 +103,7 @@ jobs:
           keypass: ${{ secrets.keypass }}
           repo_keyalias: ${{ secrets.repo_keyalias }}
           keydname: ${{ secrets.keydname }}
-          repo_url: https://raw.githubusercontent.com/${{ github.event.repository.name }}/${{ env.FDROID_REPO_BRANCH }}/repo
+          repo_url: https://raw.githubusercontent.com/${{ github.repository }}/${{ env.FDROID_REPO_BRANCH }}/repo
           virustotal_apikey: ${{ secrets.virustotal_apikey }}
 
       - name: Install modules for project
