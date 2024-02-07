@@ -278,13 +278,13 @@ pScrobbler:
     * Show scrobble sources beside each scrobble and directly search in the app you scrobbled from
     * In-app update checker for devices without Play Store
 
-ShosetsuPreview:
-  git: https://github.com/shosetsuorg/shosetsu-preview
-  name: Shosetsu Preview
-  categories:
-    - Internet
-    - Multimedia
-    - Animanga
+# ShosetsuPreview:
+#   git: https://github.com/shosetsuorg/shosetsu-preview
+#   name: Shosetsu Preview
+#   categories:
+#     - Internet
+#     - Multimedia
+#     - Animanga
 
 TachiyomiSY:
   git: https://github.com/jobobby04/TachiyomiSY
