@@ -12,8 +12,8 @@ dependencies:
     specifier: ^4.0.9
     version: 4.0.9
   fsxt:
-    specifier: ^14.0.2
-    version: 14.0.2
+    specifier: ^15.0.0
+    version: 15.0.0
   handlebars:
     specifier: ^4.7.8
     version: 4.7.8
@@ -390,16 +390,9 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /fsxt@14.0.2:
-    resolution: {integrity: sha512-Uk2oM+0ydM04c8Ass3LBLpGjD4PoSkVrDioSg3AkwCsBJikhd4kcHV3pPgV9QCemb/5/KuIM6u2C0TYEzX8YgA==}
+  /fsxt@15.0.0:
+    resolution: {integrity: sha512-8oRVXqAj+BtILFemBwob3xh8aTZjCD++C5HJKt7C5oN9aM2ABQGp5uWenCPhn/bafIGNbn45dXOjOorwwUKntQ==}
     engines: {node: '>=16'}
-    dependencies:
-      graceful-fs: 4.2.11
-      universalify: 2.0.1
-    dev: false
-
-  /graceful-fs@4.2.11:
-    resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: false
 
   /handlebars@4.7.8:
@@ -590,11 +583,6 @@ packages:
 
   /universal-user-agent@6.0.1:
     resolution: {integrity: sha512-yCzhz6FN2wU1NiiQRogkTQszlQSlpWaw8SvVegAc+bDxbzHgh1vX8uIe8OYyMH6DwH+sdTJsgMl36+mSMdRJIQ==}
-    dev: false
-
-  /universalify@2.0.1:
-    resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
-    engines: {node: '>= 10.0.0'}
     dev: false
 
   /uuid@8.3.2:

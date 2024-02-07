@@ -12,54 +12,7 @@ import { FDroidDataMetadata2 } from "./metadata-types";
 import { parse, compare } from 'semver';
 import { Entry, Files, GraphqlResult, Release, ReleaseAsset } from "./graphql";
 import Handlebars from 'handlebars';
-
-// https://stackoverflow.com/questions/6832596/how-can-i-compare-software-version-number-using-javascript-only-numbers
-function versionCompare(v1: string, v2: string, options?: { lexicographical?: boolean, zeroExtend?: boolean }) {
-    let lexicographical = options && options.lexicographical;
-    let zeroExtend = options && options.zeroExtend;
-    let v1parts: number[] | string[] = v1.split('.');
-    let v2parts: number[] | string[] = v2.split('.');
-
-    function isValidPart(x: string) {
-        return (lexicographical ? /^\d+[A-Za-z]*$/ : /^\d+$/).test(x);
-    }
-
-    if (!v1parts.every(isValidPart) || !v2parts.every(isValidPart)) {
-        return NaN;
-    }
-
-    if (zeroExtend) {
-        while (v1parts.length < v2parts.length) v1parts.push("0");
-        while (v2parts.length < v1parts.length) v2parts.push("0");
-    }
-
-    if (!lexicographical) {
-        v1parts = v1parts.map(Number);
-        v2parts = v2parts.map(Number);
-    }
-
-    for (var i = 0; i < v1parts.length; ++i) {
-        if (v2parts.length == i) {
-            return 1;
-        }
-
-        if (v1parts[i] == v2parts[i]) {
-            continue;
-        }
-        else if (v1parts[i] > v2parts[i]) {
-            return 1;
-        }
-        else {
-            return -1;
-        }
-    }
-
-    if (v1parts.length != v2parts.length) {
-        return -1;
-    }
-
-    return 0;
-}
+import { versionCompare } from './utils';
 
 interface AppInfo {
     git: string;
@@ -216,18 +169,22 @@ function findLatestPackage(repo: IndexV1, pkgName: string) {
 
     const pkgs = repo.packages[pkgName];
 
+    console.log('versions', pkgs.map(e => ({versionCode: e.versionCode, versionName: e.versionName})));
+
     pkgs.slice().sort((a, b) => {
         if (a.versionCode != b.versionCode) {
-            return a.versionCode - b.versionCode;
+            return Number(b.versionCode) - Number(a.versionCode);
         }
 
         try {
-            return compare(a.versionName, b.versionName, { loose: true });
+            return compare(b.versionName, a.versionName, { loose: true });
         } catch (err) {
+            console.warn('Could not compare semver:', err);
             try {
-                return versionCompare(a.versionName, b.versionName);
+                return versionCompare(b.versionName, a.versionName);
             } catch (err2) {
-                return a.versionName > b.versionName ? 1 : a.versionName == b.versionName ? -1 : 0;
+                console.warn('Could not compare versionCompare:', err2);
+                return a.versionName > b.versionName ? -1 : a.versionName != b.versionName ? 1 : 0;
             }
         }
     });
@@ -248,7 +205,7 @@ const
 	tableTmpl = `
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |{{#each apps}}
-| <a href="{{sourceCode}}"><img src="fdroid/repo/icons/{{icon}}" alt="{{name}} icon" width="36px" height="36px"></a> | [**{{name}}**]({{sourceCode}}) | {{summary}} | {{suggestedVersionName}} ({{suggestedVersionCode}}) |{{/each}}
+| <a href="{{sourceCode}}"><img src="https://raw.githubusercontent.com/uwx/auto-daily-fdroid/fdroid-repo/repo/icons/{{icon}}" alt="{{name}} icon" width="36px" height="36px"></a> | [**{{name}}**]({{sourceCode}}) | {{summary}} | {{suggestedVersionName}} ({{suggestedVersionCode}}) |{{/each}}
 ` + tableEnd;
 
 var tmpl = Handlebars.compile(tableTmpl);
@@ -488,7 +445,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 				return;
 			}
 
-            console.log(apkInfo);
+            // console.log(apkInfo);
 
 			// Now update with some info
 
@@ -543,7 +500,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 				const destFilePath = path.join(walkPath, latestPackage.packageName, "en-US", "changelogs", `${latestPackage.versionCode}d.txt`);
 
                 try {
-                    await fsxt.mkdirp(path.dirname(destFilePath));
+                    await fsxt.mkdirs(path.dirname(destFilePath));
                 } catch (err) {
                     console.error(`Creating directory for changelog file ${destFilePath}:`, err);
                     return;
@@ -581,7 +538,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
 
 			await fsxt.rm(screenshotsPath, { recursive: true, force: true });
 
-            await fsxt.mkdirp(screenshotsPath);
+            await fsxt.mkdirs(screenshotsPath);
 
             const screenshots = apkInfo.fileList?.filter(e => e.includes('screenshot') && (e.endsWith("png") || e.endsWith("jpg") || e.endsWith("jpeg"))) ?? [];
 
@@ -594,6 +551,7 @@ async function regenerateReadme(readMePath: string, index: IndexV1) {
                 await fsxt.writeFile(path.join(screenshotsPath, '' + (sccounter++) + path.extname(screenshot)), new DataView(await fetch(url).then(e => e.arrayBuffer())));
             }
 
+            // WHY ARE WE DELETING THIS.
             toRemovePaths.push(screenshotsPath);
         });
     }
