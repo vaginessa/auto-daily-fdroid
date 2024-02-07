@@ -1,10 +1,8 @@
-[![Last Update. Updates are automatic, and only occur if there are new releases](https://img.shields.io/github/last-commit/uwx/auto-daily-fdroid?label=last%20update&style=for-the-badge)](https://github.com/uwx/auto-daily-fdroid/commits/main) [![Number of APKs in the repo (including old versions)](https://img.shields.io/github/directory-file-count/uwx/auto-daily-fdroid/fdroid/repo?extension=apk&label=APKs&style=for-the-badge&type=file)](https://github.com/uwx/auto-daily-fdroid/tree/main/fdroid/repo) [![Repo size - I try to keep the repo under 500mb to ease local changes](https://img.shields.io/github/repo-size/uwx/auto-daily-fdroid?style=for-the-badge)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits)
-
-## note
-This repo is a clone of [xarantolus/fdroid](https://github.com/xarantolus/fdroid), filtered (via git-filter-repo's clean-ignore filter) to remove all app-specific commits. A modification has been made to the metascoop go program to only fetch 5 releases from each repo. You can get a clean copy of this repo (without apks or metadata) at [efreak/fdroid-action](https://github.com/efreak/fdroid-action), however it's not guaranteed to be up to date with xaranolus' code. I will be semi-regularly filtering the history of this repo to keep it shorter. TODO: set up github action to automatically purge deleted files from history.
+[![Last Update. Updates are automatic, and only occur if there are new releases](https://img.shields.io/github/last-commit/uwx/auto-daily-fdroid?label=last%20update&style=for-the-badge)](https://github.com/uwx/auto-daily-fdroid/commits/main) [![Number of APKs in the repo (including old versions)](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fuwx%2Fauto-daily-fdroid%2Fraw%2Fmain%2F.github%2Fapk-count.json&query=%24%5B0%5D&style=for-the-badge&label=APKs)](https://github.com/uwx/auto-daily-fdroid/tree/main/fdroid/repo) [![Repo size - I try to keep the repo under 500mb to ease local changes](https://img.shields.io/github/repo-size/uwx/auto-daily-fdroid?style=for-the-badge)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#repository-size-limits)
 
 # fdroid
 This repository hosts an [F-Droid](https://f-droid.org/) repo for the following apps. This allows you to install and update apps very easily.
+https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fuwx%2Fauto-daily-fdroid%2Fraw%2Fmain%2F.github%2Fapk-count.json&query=%24%5B0%5D&style=for-the-badge
 
 ### Apps
 
@@ -41,7 +39,7 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for the following 
 2. Now you can copy the following [link](https://raw.githubusercontent.com/uwx/auto-daily-fdroid/main/fdroid/repo), then add this repository to your F-Droid client:
 
     ```
-    https://raw.githubusercontent.com/uwx/auto-daily-fdroid/main/fdroid/repo
+    https://raw.githubusercontent.com/uwx/auto-daily-fdroid/fdroid-repo/repo
     ```
 
     Alternatively, you can also scan this QR code:
@@ -59,4 +57,4 @@ Please note that some apps published here might contain [Anti-Features](https://
 If you are a developer and want to publish your own apps right from GitHub Actions as an F-Droid repo, you can fork/copy this repo and see  [the documentation](setup.md) for more information on how to set it up.
 
 ### [License](LICENSE)
-The license is for the files in this repository, *except* those in the `fdroid` directory. These files *might* be licensed differently; you can use an F-Droid client to get the details for each app.
+The license is for the files in this repository, *except* those in the `fdroid` directory and `fdroid-repo` branch. These files *might* be licensed differently; you can use an F-Droid client to get the details for each app.
