@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: fdroid generate repo
+  cancel-in-progress: true
+
 jobs:
   apps:
     name: "Generate repo from apps listing"
