@@ -122,7 +122,9 @@ jobs:
         working-directory: ${{ env.PROJECT_LOCATION }}/metascoop-ts
 
       - name: Run metascoop-ts
-        run: tsx ${{ env.PROJECT_LOCATION }}/metascoop-ts/src/index.ts
+        run: |
+          tsx src/index.ts
+          tsx src/xman.ts
         working-directory: ${{ env.PROJECT_LOCATION }}/metascoop-ts
         env:
           GH_ACCESS_TOKEN: ${{ github.token }}
