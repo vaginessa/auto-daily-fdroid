@@ -163,7 +163,7 @@ jobs:
       - name: Write APK count to file for shields.io
         shell: pwsh
         run: |
-          (Get-ChildItem -Filter *.apk -Path "$env:PROJECT_LOCATION\fdroid\repo" -File -Recurse | Measure-Object).Count | Out-File "${{ github.workspace }}\.github\apk-count.json"
+          echo "[$((Get-ChildItem -Filter *.apk -Path "$env:PROJECT_LOCATION\fdroid\repo" -File -Recurse | Measure-Object).Count)]" | Out-File "${{ github.workspace }}\.github\apk-count.json"
 
       - name: Push updated readme and apk-count.json if needed
         shell: pwsh
