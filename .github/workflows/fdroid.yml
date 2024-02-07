@@ -125,6 +125,9 @@ jobs:
         run: |
           tsx src/index.ts
           tsx src/xman.ts
+
+          cd "${{ env.PROJECT_LOCATION }}/fdroid"
+          fdroid update --pretty --create-metadata --delete-unknown
         working-directory: ${{ env.PROJECT_LOCATION }}/metascoop-ts
         env:
           GH_ACCESS_TOKEN: ${{ github.token }}
