@@ -167,11 +167,11 @@ function findLatestPackage(repo: IndexV1, pkgName: string) {
         return undefined;
     }
 
-    const pkgs = repo.packages[pkgName];
+    let pkgs = repo.packages[pkgName];
 
     console.log('versions', pkgs.map(e => ({versionCode: e.versionCode, versionName: e.versionName})));
 
-    pkgs.slice().sort((a, b) => {
+    pkgs = pkgs.slice().sort((a, b) => {
         if (a.versionCode != b.versionCode) {
             return Number(b.versionCode) - Number(a.versionCode);
         }
@@ -190,7 +190,7 @@ function findLatestPackage(repo: IndexV1, pkgName: string) {
     });
 
 	// Return the one with the latest version
-	return pkgs[pkgs.length-1];
+	return pkgs[0];
 }
 
 async function writeMetaFile(path: string, data: FDroidDataMetadata2) {
