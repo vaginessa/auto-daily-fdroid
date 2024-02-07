@@ -1,0 +1,4 @@
+- Bug fixes
+- Translation updates by the translators on Crowdin
+
+Copied from Play Store what's new, may not be accurate for minor updates.

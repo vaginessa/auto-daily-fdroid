@@ -1,0 +1,19 @@
+changes:
+- new features:
+  - new jellyfin enhanced tracker
+  - "gpu-next" option in advanced player settings (if you don't know what this is, you probably don't need it)
+- bugfixes:
+  - MAL tracking (you need to log into MAL again with this update)
+  - start screen setting works properly now
+
+---
+
+### Checksums
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | 49764cbda826844583246b13c6269052874cf25c61e94dad1f4268ae66ae7648
+| arm64-v8a | 3c110a80361ec5838df460db53cc0f6f24a1ff2fa84f25d067269b7f8ea605fc
+| armeabi-v7a | 2909db2db60d17e4fef05524964bd39eaf645d5e82f2279786f40b1a9dc9ec85
+| x86 | 961b50b38f5a217b1439e4cf9efb724a4d6dfaa7de5231e952f147af525caed8
+| x86_64 | 7eae5d8f59c0bdbb3765a8085d5c92407390d70926aa761cba4714f8360047ca |

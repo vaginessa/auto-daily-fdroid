@@ -1,0 +1,23 @@
+### Commits
+
+https://github.com/jobobby04/TachiyomiSY/compare/c1af389ee...7e151ddb8
+
+- Fix Indonesian translation (#68) (@crse)
+- Fixed Serbian translation (#75) (@DavidK004)
+- Fix score issue with MangaUpdates (@AntsyLich)
+- Update AboutScreen with new links (@jobobby04)
+- v1.10.2 (@jobobby04)
+- zh-rCN translation updates (#1013) (@Howard20181)
+- Update strings.xml (#1021) (@NeKoOuO)
+
+---
+
+### Checksums
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | 1a6263679f956576b4f99f7745547b0da31196b0616f80677e9a9f95e0cb2828 |
+| arm64-v8a | feb07e1029e240821d2d14715edc21e62f31844ff195da2fc57951b533c99942 |
+| armeabi-v7a | 5f16eb3f5355ebc33a1752a32dfc9a13ceca1f3f4d88b7a42f91cfe5be8ad8a7 |
+| x86 | 3c2beef80cb33d4600a94b87540a7b428eee16fb45fca786efce36fe97926628 |
+| x86_64 | a43bcccffc13b6bd44ac666624c5ad559a4a88b497c9f64c9ea4c11f72c361e0 |

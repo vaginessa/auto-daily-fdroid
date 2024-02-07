@@ -1,0 +1,5 @@
+## What's Changed
+* fix comments repo. by @Livinglist in https://github.com/Livinglist/Hacki/pull/364
+
+
+**Full Changelog**: https://github.com/Livinglist/Hacki/compare/v2.6.1...v2.6.2

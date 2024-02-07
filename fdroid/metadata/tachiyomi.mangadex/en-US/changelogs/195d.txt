@@ -1,0 +1,48 @@
+## 🥳 New
+- New Bake Neko style Logo
+- More customizable auto update options these are enabled by default!!!
+  Check your library settings to adjust
+- Winter 2024 Seasonals (@curche)
+## 🏗️ Changes
+- Hopper Icon as group type (@e-shl)
+- Moved repository to nekomangaorg
+- Update privacy policy url and remove discords/website links 
+## 🐜 Fixes
+- Browse presenter getting repeat network calls 
+- Tapping through search settings (@Jays2Kings)
+- Faulty MangaUpdates score (@Jays2Kings @AntsyLich)
+## 🛠️ Other
+- Add missing pending intent flag 
+- Replace a bunch of static X.dp with their equivelent Size.X
+- Ktfmt code base
+- Update readme format with some idea help from (@Soitora) 
+- Update serialization.version to v1.6.2 (#1618) (@renovate[bot])
+- Update dependency androidx.activity:activity-compose to v1.8.2 (#1625) (@renovate[bot])
+- Update eskatos/gradle-command-action action to v2.11.1 (#1623) (@renovate[bot])
+- Update sandwich.version to v2.0.5 (#1622) (@renovate[bot])
+- Update dependency androidx.webkit:webkit to v1.9.0 (#1615) (@renovate[bot])
+- Update aboutlib.version to v10.10.0 (#1632) (@renovate[bot])
+- Update plugin kotlinter to v4.1.1 (#1631) (@renovate[bot])
+- Update dependency org.jsoup:jsoup to v1.17.2 (#1629) (@renovate[bot])
+- Update dependency org.jetbrains.kotlinx:kotlinx-collections-immutable to v0.3.7 (#1628) (@renovate[bot])
+- Update dependency androidx.annotation:annotation to v1.7.1 (#1627) (@renovate[bot])
+- Update github/codeql-action action to v3 (#1638) (@renovate[bot])
+- Update dependency com.squareup.okio:okio to v3.7.0 (#1637) (@renovate[bot])
+- Update dependency com.squareup.leakcanary:leakcanary-android to v2.13 (#1636) (@renovate[bot])
+- Update dependency com.google.android.material:material to v1.11.0 (#1635) (@renovate[bot])
+- Update dependency io.mockk:mockk to v1.13.9 (#1634) (@renovate[bot])
+- Update dependency androidx.lifecycle:lifecycle-runtime-compose to v2.7.0 (#1644) (@renovate[bot])
+- Update dependency com.mikepenz:multiplatform-markdown-renderer-android to v0.12.0 (#1645) (@renovate[bot])
+- Update dependency com.google.firebase:firebase-crashlytics-ktx to v18.6.1 (#1648) (@renovate[bot])
+- Update lifecycle.version to v2.7.0 (#1646) (@renovate[bot])
+- Update dependency com.google.gms.google-services to v4.4.0 (#1658) (@renovate[bot])
+- Update dependency com.ncorti.ktfmt.gradle to v0.16.0 (#1659) (@renovate[bot])
+- Update agp.version to v8.2.2 (#1604) (@renovate[bot])
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | b26861d8382d8eed52be556ee5f9579aa1985fea53372459ec72fbfea9239a00
+| arm64-v8a | a205ab0f24b518a2e905f8341aa6fd4dd0f12f29008c09ba71d4e582967608de
+| armeabi-v7a | 9edf620e9f43e92d209953225609f852ebc7b2eef2b7f6a8c7f94e94821ef2da
+| x86 | c66679fdfad80ba2d7e3fcc16296c7eb2c8040aa012f2e73889ad531564387ee
+| x86_64 | 0316055ad4b9d4edadf3e8743a511ee50c24c900089ab3587fdf11fba04b2f16

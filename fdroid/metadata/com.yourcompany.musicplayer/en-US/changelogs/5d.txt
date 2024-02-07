@@ -1,0 +1,6 @@
+Major update to the app
+<li> New updated UI
+<li> Tried to implement themes (light /dark)
+<li> Animations added
+<li> Font changed
+<li> Now directly play any audio file from sd card.

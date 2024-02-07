@@ -1,0 +1,22 @@
+## What's Changed
+* fixed windows build by @DattatreyaReddy in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/273
+* fixed android build by @DattatreyaReddy in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/270
+
+## What's Changed
+- Fixed HTTPS server URL not working in android
+-  Swiping from first chapter goes to manga page
+- Themes support (With True dark mode)
+- Ability to disable pinch to zoom in android
+---
+# Sorayomi 0.5.21 - Added Themes support (Android hotfix)
+# Commits
+* Http-cert-255 by @DattatreyaReddy in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/257
+* Translations update from Hosted Weblate by @weblate in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/254
+* Translations update from Hosted Weblate by @weblate in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/261
+* Support swiping from first chapter to manga page by @Kamefrede in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/265
+* added requested features and themes by @DattatreyaReddy in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/269
+
+## New Contributors
+* @Kamefrede made their first contribution in https://github.com/Suwayomi/Tachidesk-Sorayomi/pull/265
+
+**Full Changelog**: https://github.com/Suwayomi/Tachidesk-Sorayomi/compare/0.5.19...0.5.22

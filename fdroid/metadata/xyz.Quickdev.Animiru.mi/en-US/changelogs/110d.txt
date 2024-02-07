@@ -1,0 +1,38 @@
+### Changes
+
+- Upstream Updates
+- Bug Fixes
+- Navigation Pill has fused with the Navigation Bar
+    - Fixed related UI bugs as well
+- New Storage Screen
+- Player Dialogs are cleaner (written in compose)
+- Cleaner Quality options sheet
+- New Player Sheet for subtitle settings
+    - Audio and Subtitle delay
+    - Subtitle coloring
+    - Subtitle fonts and style
+- More Bug Fixes
+
+---
+
+### Checksums
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| arm64-v8a | 04e47211ceca9a0e739f060a2af65b92548a6b94aa508532d7fd7f42fd874694 |
+| armeabi-v7a | 184f8b7862b2149f5ff1a469787c13faed4eae138148a9d9d3aac2774dbb0403 |
+| universal | 090cd6ec35557d806fa5f326e9bcebd3533082728e7f83cfb87d02d90b0bf4bd |
+| x86 | a4ec8ecaea944591eaf40f910981216fe577abb0c19dc3466eea44e8f814334f |
+| x86_64 | 47bb73287698a4cdea34b94c2baf4acb5b2fff2d45a4560802982982455ef71b |
+
+To find out the best version for you:-
+
+https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw
+
+Download the app from the link above ^
+
+Open app ---> SOC tab ---> ABI/Supported ABI
+
+Install based on the values given in the above variant fields
+
+Universal will work regardless of the ABI

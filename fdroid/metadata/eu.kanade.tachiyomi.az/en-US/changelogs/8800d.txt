@@ -1,0 +1,21 @@
+Tachiyomi has removed almost all extensions from the official extensions repo. This update adds support for using the same external extension repos as Tachiyomi (they have a different URL format and can use non-github repos). 
+
+You can add extension repos by going to settings -> browse -> edit repos
+
+This was caused by some legal threat by Kakao Entertainment. If you want to blame someone, blame everyone who ever read Solo Leveling
+
+---
+
+What an absolute legendary trainwreck of a shitshow of an upgrade. Screw. This.
+
+Where the hell is the honeycomb I worked so hard to curate over the last 5 years or so? How can they literally annihilate the UI/UX without providing any sort of option for the dedicated power users who spent a ludicrous amount of time setting that up?
+
+Why did all the shortcut and action buttons change?! And - again - how the hell is there no option to change it back?!
+
+I seriously almost don’t want to use the thing anymore. I just feel incredibly disrespected as someone who’s invested heavily into this ecosystem. It’s cool to try new things, it’s not cool to force us into it.
+
+It’s like as if MacOS suddenly decided your menu bar was suddenly on the side of your screen instead of the top after so many years.
+
+Seriously, what the fuck is this shit? If I had any idea how brutally they destroyed half of how I was used to operating this thing I would’ve never, ever upgraded.
+
+I seriously can’t believe there’s no way back. :( screw you, apple.
