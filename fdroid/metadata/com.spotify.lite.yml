@@ -1,0 +1,20 @@
+AuthorName: Spotify AB
+Categories:
+  - Multimedia
+  - Music
+  - xManager
+CurrentVersionCode: 2147483647
+IssueTracker: 'https://www.spotify.com/'
+Name: Spotify Lite (xManager)
+SourceCode: 'https://github.com/Team-xManager/xManager'
+Summary: 'With Spotify Lite, you can play millions of songs, for free.'
+WebSite: 'https://play.google.com/store/apps/details?id=com.spotify.lite'
+AntiFeatures:
+  - Ads
+  - NonFreeNet
+  - NonFreeAdd
+  - NonFreeAssets
+  - NonFreeDep
+  - NoSourceSince
+  - Tracking
+  - UpstreamNonFree

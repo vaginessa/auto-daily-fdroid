@@ -1,0 +1,19 @@
+AuthorName: TIDAL
+Categories:
+  - Multimedia
+  - Music
+  - xManager
+CurrentVersionCode: 2147483647
+IssueTracker: 'https://tidal.com/'
+Name: TIDAL (xManager)
+SourceCode: 'https://github.com/Team-xManager/xManager'
+Summary: 'Offline and always ad-free - stream in the highest quality available.'
+WebSite: 'https://xmanagerapp.com/'
+AntiFeatures:
+  - NonFreeNet
+  - NonFreeAdd
+  - NonFreeAssets
+  - NonFreeDep
+  - NoSourceSince
+  - Tracking
+  - UpstreamNonFree

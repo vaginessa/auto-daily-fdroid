@@ -1,0 +1,65 @@
+2.16.0 A Real new App.
+Existing users this version is a new app install please make a backup and read the onboarding.
+Also see: https://github.com/nekomangaorg/Neko/issues/1684
+## 🥳 New
+- updated App id and reset internal version code
+- Add onboarding screen
+- Switch to unified storage for downloads, page saves, cover saves, and backups
+
+## 🏗️ Changes
+- Target android sdk 34
+- Remove V5 Migration, if you still need this you need help.
+- Remove option to buy stuff from MangaDex cause loot.moe doesn't exist anymore
+- Library Updating now binds the existing MD track if it exists
+- Enable auto back up by default, always auto backup up to 6 files.
+- Remove unfollowed track status for smart update, it causes more issues then worth
+- Update AniList Rate limit
+- Update mapping file for similar
+
+## 🐜 Fixes
+- Add back monochrome icon
+- use the new icon color for the notification, and allow debug build to use its own
+- Question mark on string joins, that were caused by ktfmt
+- Smart Update based on Tracking being opposite
+- Smart updates plan to read and completed not being unique
+- Don't try to update mdlist track when not logged in
+- Update MAL auth logic
+- Make the queue download chapter work faster
+- Make download cache work with Unified storage
+
+## 🛠️ Other
+- run more ktfmt
+- Adding Type-safe project accessors (#194) (@theolm)
+- Convert follows sync to Job.
+- rename TrackSyncService to TrackSyncProcessor
+- change deprecated buildDir for gradle
+- change variable name in app update checker
+- Remove duplicate permissions
+- Remove KAHelpers
+- rename string from app_name_neko -> app_name
+- use material motion that matches compose 1.6
+- use material 3 about Libraries
+- Try to show actual path in invalid location downloader notification
+- update UniFile Library
+- Switch to StorageManager class
+- Update lowply/auto-closer action to v0.0.6 (#1664) (@renovate[bot])
+- Update dependency androidx.webkit:webkit to v1.10.0 (#1668) (@renovate[bot])
+- Update styfle/cancel-workflow-action action to v0.12.1 (#1676) (@renovate[bot])
+- Update eskatos/gradle-command-action action to v2.12.0 (#1670) (@renovate[bot])
+- Update dependency com.ncorti.ktfmt.gradle to v0.17.0 (#1679) (@renovate[bot])
+- Update gradle/wrapper-validation-action action to v2 (#1681) (@renovate[bot])
+- Update eskatos/gradle-command-action action to v3 (#1678) (@renovate[bot])
+- Update compose.version to v1.6.0 (#1666) (@renovate[bot])
+- Update dependency androidx.compose.material:material to v1.6.0 (#1667) (@renovate[bot])
+- Update dependency io.github.fornewid:material-motion-compose-core to v1.2.0 (#1686) (@renovate[bot])
+- Update to compose material 1.2.0_rc1
+- Update accompanist.version to v0.34.0 (#1669) (@renovate[bot])
+- Update dependency gradle to v8.6 (#1685) (@renovate[bot])
+
+| Variant | SHA-256 |
+| ------- | ------- |
+| Universal | 08b6108b885689f6378855d668a67dfbf6c051aa96a29f3cd3ddf9d6edc15d89
+| arm64-v8a | 8eccce5cbe113133ae150d64a3cb98c16525d61b0d83e7d2895eb65fd477926b
+| armeabi-v7a | 1856216a6d1c2b12a4c4f05538dcbb72e168900a21561adf217c656169dfd9de
+| x86 | 34c1350e8d30f3099831d9c8f587eb727e6f53f65f30a556ece04ba9a5291288
+| x86_64 | 02bd5c4a0722f9338b24a3467ba4f901a6c6dbafe071f2e5b7944fc58922f3d9

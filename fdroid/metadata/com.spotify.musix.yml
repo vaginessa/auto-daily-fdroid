@@ -1,0 +1,20 @@
+AuthorName: Spotify AB
+Categories:
+  - Multimedia
+  - Music
+  - xManager
+CurrentVersionCode: 2147483647
+IssueTracker: 'https://www.spotify.com/'
+Name: Spotify (Cloned) (xManager)
+SourceCode: 'https://github.com/Team-xManager/xManager'
+Summary: 'Spotify is a digital music service that gives you access to millions of songs.'
+WebSite: 'https://xmanagerapp.com/'
+AntiFeatures:
+  - Ads
+  - NonFreeNet
+  - NonFreeAdd
+  - NonFreeAssets
+  - NonFreeDep
+  - NoSourceSince
+  - Tracking
+  - UpstreamNonFree
