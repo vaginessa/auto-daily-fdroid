@@ -2,7 +2,6 @@
 
 # fdroid
 This repository hosts an [F-Droid](https://f-droid.org/) repo for the following apps. This allows you to install and update apps very easily.
-https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fuwx%2Fauto-daily-fdroid%2Fraw%2Fmain%2F.github%2Fapk-count.json&query=%24%5B0%5D&style=for-the-badge
 
 ### Apps
 
