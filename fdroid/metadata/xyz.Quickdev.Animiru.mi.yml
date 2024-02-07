@@ -3,7 +3,7 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 103
+CurrentVersionCode: 110
 IssueTracker: ''
 Name: Animiru
 SourceCode: https://github.com/Quickdesh/Animiru
@@ -24,4 +24,4 @@ Description: >-
     * Light and dark themes
     * Schedule updating your library for new episodes
     * Create backups locally to watch offline or to your desired cloud service
-CurrentVersion: 0.15.2.3
+CurrentVersion: 0.16.0.0

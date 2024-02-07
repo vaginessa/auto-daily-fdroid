@@ -38,5 +38,5 @@ Description: >-
 Summary: This is a fully fledged Sudoku game written in Dart using Flutter.
 Categories:
   - Games
-CurrentVersion: 2.1.1
-CurrentVersionCode: 1000
+CurrentVersion: 2.4.0
+CurrentVersionCode: 2040

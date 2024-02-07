@@ -3,7 +3,7 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 8740
+CurrentVersionCode: 8800
 IssueTracker: ''
 Name: TachiyomiAZ
 SourceCode: https://github.com/az4521/TachiyomiAZ
@@ -58,4 +58,4 @@ Description: >-
       * Maintained hamburger navigation
       * Grid view corner rounding configuration
       * Manga recommendations
-CurrentVersion: v8.7.4-AZ
+CurrentVersion: v8.8.0-AZ

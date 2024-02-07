@@ -3,7 +3,7 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 50
+CurrentVersionCode: 52
 IssueTracker: ''
 Name: Takoyomi
 SourceCode: https://github.com/CrepeTF/Takoyomi
@@ -17,4 +17,4 @@ Description: >-
   "Did or have not" means. There's a fork of this repo as well over at
   https://github.com/suhan-paradkar/Takoyomi but that one doesn't have
   releases...
-CurrentVersion: 3.2.5
+CurrentVersion: 3.2.7

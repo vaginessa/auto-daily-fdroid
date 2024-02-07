@@ -2,7 +2,7 @@ AuthorName: ''
 Categories:
   - Internet
   - Science & Education
-CurrentVersionCode: 20
+CurrentVersionCode: 22
 IssueTracker: ''
 Name: Rock It!
 SourceCode: https://github.com/xarantolus/rockit
@@ -45,4 +45,4 @@ Description: >
   "NonFreeNet".
 AntiFeatures:
   - NonFreeNet
-CurrentVersion: 1.3.4
+CurrentVersion: 1.5.0

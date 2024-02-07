@@ -1,0 +1,31 @@
+AuthorName: ''
+Categories:
+  - Internet
+CurrentVersionCode: 1372
+IssueTracker: ''
+Name: Hacki
+SourceCode: https://github.com/Livinglist/Hacki
+Summary: A feature-rich Hacker News client.
+WebSite: ''
+License: GPL-3.0
+Description: |-
+  Features:
+  * Log in using your Hacker News account.
+  * Browse stories from various categories.
+  * Search for stories.
+  * Submit stories.
+  * Pin stories.
+  * Mark stories as favorite.
+  * Leave comments.
+  * Collapse comments.
+  * View parent comments without scrolling up.
+  * View and participate in polls.
+  * Browse comments and stories you have posted.
+  * Vote on comments or stories.
+  * Get in-app notification when there is new reply to your stories or comments.
+  * Download stories and comments for offline reading.
+  * Pick up where you left off.
+  * Synced favorites and pins across devices. (iOS only)
+  * Launch from system share sheet.
+  * And more...
+CurrentVersion: 2.6.2

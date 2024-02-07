@@ -3,11 +3,11 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 60
+CurrentVersionCode: 62
 IssueTracker: ''
-Name: TachiyomiSY
-SourceCode: https://github.com/jobobby04/TachiyomiSY
-Summary: Free and open source manga reader for Android
+Name: TachiyomiSY (Preview)
+SourceCode: https://github.com/jobobby04/TachiyomiSYPreview
+Summary: A download host for TachiyomiSY Preview builds
 WebSite: ''
 License: Apache-2.0
 Description: >-
@@ -79,4 +79,4 @@ Description: >-
       * PervEden (EN and IT)
       * Puruin
       * Tsumino
-CurrentVersion: 1.10.0
+CurrentVersion: 1.10.2

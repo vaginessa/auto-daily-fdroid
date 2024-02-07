@@ -3,7 +3,7 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 120
+CurrentVersionCode: 121
 IssueTracker: ''
 Name: Aniyomi
 SourceCode: https://github.com/jmir1/aniyomi
@@ -25,4 +25,4 @@ Description: >-
       * Light and dark themes
       * Schedule updating your library for new chapters
       * Create backups locally to read offline or to your desired cloud service
-CurrentVersion: 0.15.2.3
+CurrentVersion: 0.15.2.4

@@ -1,7 +1,7 @@
 AuthorName: ''
 Categories:
   - Multimedia
-CurrentVersionCode: 315
+CurrentVersionCode: 317
 IssueTracker: ''
 Name: Pano Scrobbler
 SourceCode: https://github.com/kawaiiDango/pScrobbler
@@ -30,4 +30,4 @@ Description: >-
   supports Material You * Broadcast Intents for automation apps like Tasker *
   Show scrobble sources beside each scrobble and directly search in the app you
   scrobbled from * In-app update checker for devices without Play Store
-CurrentVersion: 3.15 - 2023, Dec 17
+CurrentVersion: 3.17 - 2024, Jan 31

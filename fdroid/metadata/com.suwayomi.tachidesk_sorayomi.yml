@@ -3,7 +3,7 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 2001
+CurrentVersionCode: 4001
 IssueTracker: ''
 Name: Tachiyomi-Sorayami
 SourceCode: https://github.com/Suwayomi/Tachidesk-Sorayomi
@@ -36,4 +36,4 @@ Description: >-
 
   Keep in mind that Tachidesk-Sorayomi and Tachidesk-Server are alpha software,
   so it can have issues. See Support and help if it happens.
-CurrentVersion: 0.5.23
+CurrentVersion: 0.5.22

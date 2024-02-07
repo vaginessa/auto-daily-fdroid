@@ -1,7 +1,7 @@
 AuthorName: ''
 Categories:
   - Writing
-CurrentVersionCode: 8
+CurrentVersionCode: 10
 IssueTracker: ''
 Name: Notality
 SourceCode: https://github.com/xarantolus/notality
@@ -23,4 +23,4 @@ Description: >
   - Import/Export your notes to save them externally
 
   - Localization for English and German
-CurrentVersion: 1.7.0
+CurrentVersion: 1.8.1

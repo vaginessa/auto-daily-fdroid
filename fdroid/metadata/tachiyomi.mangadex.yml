@@ -3,7 +3,7 @@ Categories:
   - Internet
   - Multimedia
   - Animanga
-CurrentVersionCode: 193
+CurrentVersionCode: 195
 IssueTracker: ''
 Name: Neko
 SourceCode: https://github.com/CarlosEsco/Neko
@@ -29,4 +29,4 @@ Description: >-
       * Look at an additional source for missing chapters not hosted on MangaDex
       * Ability to attempt to merge missing chapters from MangaDex with another source
       * And many more
-CurrentVersion: 2.14.1
+CurrentVersion: 2.15.0
