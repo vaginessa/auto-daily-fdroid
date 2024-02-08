@@ -482,6 +482,28 @@ TachiyomiAZ:
         * Grid view corner rounding configuration
         * Manga recommendations
 
+tachiyomiOCR:
+  git: https://github.com/Rattlehead15/tachiyomiOCR
+  name: tachiyomiOCR
+  summary: This is a fork of the popular manga reader Tachiyomi, which adds OCR and Dictionary lookup features to the reader to make the process of learning Japanese with manga easier.
+  categories:
+    - Internet
+    - Multimedia
+    - Animanga
+  description: >-
+    This is a fork of the popular manga reader Tachiyomi, which adds OCR and Dictionary lookup features to the reader to make the process of learning Japanese with manga easier.
+
+    ## Added features
+
+    * Popup dictionary to quickly look up unknown words. Supports deinflection of verbs and adjectives.
+    * OCR (Optical character recognition) to quickly search words without having to write them.
+
+    ## Usage
+    Tachiyomi OCR adds two new buttons in the reader menu, the dictionary button and the OCR button.
+    - The dictionary button is straightforward, it opens up the dictionary and you can look up any word you want.
+    - When the OCR button is pressed, you will be prompted to select the region of the screen which contains the word you want to look for. Once the region is selected, long press the OCR rectangle to scan the word and look it up in the dictionary
+    - Dictionary entries have an Anki button in the upper right corner. If you set up your card export correctly in the settings, this button can be pressed to export the word definitions to ankiDroid
+
 # TachiyomiJ2K:
 #   git: https://github.com/Jays2Kings/tachiyomiJ2K
 #   name: TachiyomiJ2K
@@ -534,19 +556,19 @@ Neko:
   description: >-
     This is a MangaDex specific fork of Tachiyomi and TachiyomiJ2K. This contains features specific to Mangadex that those versions cannot offer. It also features almost every feature that J2K has except for other sources,local sources, and editting manga.
 
-    Note:: This fork is for Android 7+
+    Note: This fork is for Android 7+
 
-    Specific features::
-
-        * Supports native login to MangaDex and 2FA
-        * Use MDList as Tracker
-        * Similar Manga Recommendations
-        * Manually sync of Manga to and from Mangadex follows list
-        * Sync Followed Manga's read chapters from MangaDex into Neko automatically
-        * Filter by Scanlation Group in chapter list
-        * Look at an additional source for missing chapters not hosted on MangaDex
-        * Ability to attempt to merge missing chapters from MangaDex with another source
-        * And many more
+    Features include:
+    - [MangaDex](https://mangadex.org/) manga reader for Android 7+
+    - Offline reading Supports native login to MangaDex
+    - MDList support
+    - Tracker support: <a target="_blank" href="https://myanimelist.net/">MyAnimeList</a>, <a target="_blank" href="https://anilist.co/">AniList</a>, <a target="_blank" href="https://kitsu.io/">
+      Kitsu</a>, <a target="_blank" href="https://mangaupdates.com">MangaUpdates</a>
+    - Custom computer generated similar manga recommendations, as well as user recommendations from MyAnimeList, MangaUpdates, AniList
+    - Syncing manga, and read statuses to and from MangaDex and Neko
+    - Ability to merge missing chapters from MangaDex with other sources including <a target="_blank" href="https://toonily.com/">Toonily</a>, <a target="_blank" href="https://www.manga4life.com/">
+      MangaLife</a>, and <a target="_blank" href="https://komga.org/">Komga</a>
+    - Plus much more...
 
 Animiru:
   git: https://github.com/Quickdesh/Animiru
@@ -570,6 +592,68 @@ Animiru:
       * Schedule updating your library for new episodes
       * Create backups locally to watch offline or to your desired cloud service
 
+Kuukiyomi:
+  git: https://github.com/LuftVerbot/Kuukiyomi
+  name: Kuukiyomi
+  summary: Kuukiyomi is an fork of Aniyomi, implementing features from various Tachiyomi forks, such as TachiyomiSY and others.
+  categories:
+    - Internet
+    - Multimedia
+    - Animanga
+  description: >-
+    Kuukiyomi is an fork of Aniyomi which is an unofficial fork of the free and open source manga reader Tachiyomi that adds
+    anime capabilities! For Android 6.0 and above. This version of Aniyomi aims to implement as many features of other forks
+    as possible. This Includes TachiyomiSY but also other forks.
+
+    Features include:
+    * Kuukiyomi:
+      * Torrent support(Needs right extensions) (@Diegopyl1209)
+      * resmush.it(Data Saver Provider)
+      * Group by tags in library
+      * Discord Rich Presence for Manga
+    * Aniyomi:
+      * Watching videos
+      * View images
+      * Local reading/watching of downloaded content
+      * A configurable reader with multiple viewers, reading directions and other settings.
+      * A configurable player built on mpv-android with multiple options and settings
+      * Tracker support: [MyAnimeList](https://myanimelist.net/), [AniList](https://anilist.co/), [Kitsu](https://kitsu.io/), [MangaUpdates](https://mangaupdates.com), [Shikimori](https://shikimori.one), and [Bangumi](https://bgm.tv/)
+      * Categories to organize your library
+      * Light and dark themes
+      * Create backups locally to read/watch offline or to your desired cloud service
+    * Other fork features:
+      * TachiyomiSY:
+        * Data Saver
+        * Edit Info
+        * Library Grouping
+        * Double Pages
+      * Animiru:
+        * Discord Rich Presence
+      * TachiyomiJ2K:
+        * Page Preload
+
+Mihon:
+  git: https://github.com/mihonapp/mihon
+  name: Mihon
+  summary: Discover and read manga, webtoons, comics, and more – easier than ever on your Android device.
+  categories:
+    - Internet
+    - Multimedia
+    - Animanga
+  description: >-
+    Full-featured reader
+    Discover and read manga, webtoons, comics, and more – easier than ever on your Android device. Mihon is a continuation of Tachiyomi.
+
+    Features:
+    * Local reading of content.
+    * A configurable reader with multiple viewers, reading directions and other settings.
+    * Tracker support: MyAnimeList, AniList, Kitsu, MangaUpdates, Shikimori, and Bangumi support.
+    * Categories to organize your library.
+    * Light and dark themes.
+    * Schedule updating your library for new chapters.
+    * Create backups locally to read offline or to your desired cloud service.
+    * Plus much more...
+
 Takoyomi:
   git: https://github.com/CrepeTF/Takoyomi
   name: Takoyomi
@@ -579,9 +663,7 @@ Takoyomi:
     - Multimedia
     - Animanga
   description: >-
-    This is all I've got::Tachiyomi is a free and open source manga reader for Android 6.0 and above. Takoyomi is a fork of TachiyomiSY which aims to implement UI changes which TachiyomiSY did or have not.
-    No, I don't know what "Did or have not" means.
-    There's a fork of this repo as well over at https://github.com/suhan-paradkar/Takoyomi but that one doesn't have releases...
+    Tachiyomi is a free and open source manga reader for Android 6.0 and above. Takoyomi is a fork of TachiyomiSY which aims to implement UI changes which TachiyomiSY did or have not.
 
 Aniyomi:
   git: https://github.com/jmir1/aniyomi
@@ -623,7 +705,6 @@ notality:
   # you can use any name here, but you should look at the existing categories first
   categories:
     - Writing
-
 
 rockit:
   git: https://github.com/xarantolus/rockit
